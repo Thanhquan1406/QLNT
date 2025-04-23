@@ -1,0 +1,191 @@
+@model QLNT.Models.Customer
+
+@{
+    ViewData["Title"] = "Chi tiết khách hàng";
+}
+
+<h1>Chi tiết khách hàng</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdentityCard)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdentityCard)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdentityCardIssueDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdentityCardIssueDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdentityCardIssuePlace)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdentityCardIssuePlace)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Province)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Province)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.District)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ward)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ward)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankAccount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankAccount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Occupation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Occupation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Workplace)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Workplace)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmergencyContact)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmergencyContact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmergencyPhone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmergencyPhone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultant)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultant)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConsultantPhone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConsultantPhone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccessCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccessCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsForeigner)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsForeigner)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+    </dl>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        @if (!string.IsNullOrEmpty(Model.RepresentativeImage))
+        {
+            <div class="form-group">
+                <label class="control-label">Ảnh đại diện</label>
+                <img src="@Model.RepresentativeImage" alt="Ảnh đại diện" class="img-thumbnail" style="max-width: 200px;" />
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.FrontIdentityCard))
+        {
+            <div class="form-group">
+                <label class="control-label">CCCD mặt trước</label>
+                <img src="@Model.FrontIdentityCard" alt="CCCD mặt trước" class="img-thumbnail" style="max-width: 200px;" />
+            </div>
+        }
+    </div>
+    <div class="col-md-6">
+        @if (!string.IsNullOrEmpty(Model.BackIdentityCard))
+        {
+            <div class="form-group">
+                <label class="control-label">CCCD mặt sau</label>
+                <img src="@Model.BackIdentityCard" alt="CCCD mặt sau" class="img-thumbnail" style="max-width: 200px;" />
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.Portrait))
+        {
+            <div class="form-group">
+                <label class="control-label">Hộ chiếu</label>
+                <img src="@Model.Portrait" alt="Hộ chiếu" class="img-thumbnail" style="max-width: 200px;" />
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Chỉnh sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+</div> 

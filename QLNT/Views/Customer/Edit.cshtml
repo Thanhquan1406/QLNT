@@ -1,0 +1,271 @@
+@model QLNT.Models.CustomerViewModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin khách hàng";
+}
+
+<h1>Chỉnh sửa thông tin khách hàng</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="RepresentativeImage" />
+            <input type="hidden" asp-for="FrontIdentityCard" />
+            <input type="hidden" asp-for="BackIdentityCard" />
+            <input type="hidden" asp-for="Portrait" />
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="FullName" class="control-label"></label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateOfBirth" class="control-label"></label>
+                        <input asp-for="DateOfBirth" class="form-control" type="date" />
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <select asp-for="Gender" class="form-control">
+                            <option value="">-- Chọn giới tính --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdentityCard" class="control-label"></label>
+                        <input asp-for="IdentityCard" class="form-control" />
+                        <span asp-validation-for="IdentityCard" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdentityCardIssueDate" class="control-label"></label>
+                        <input asp-for="IdentityCardIssueDate" class="form-control" type="date" />
+                        <span asp-validation-for="IdentityCardIssueDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdentityCardIssuePlace" class="control-label"></label>
+                        <input asp-for="IdentityCardIssuePlace" class="form-control" />
+                        <span asp-validation-for="IdentityCardIssuePlace" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Province" class="control-label"></label>
+                        <input asp-for="Province" class="form-control" />
+                        <span asp-validation-for="Province" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="District" class="control-label"></label>
+                        <input asp-for="District" class="form-control" />
+                        <span asp-validation-for="District" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Ward" class="control-label"></label>
+                        <input asp-for="Ward" class="form-control" />
+                        <span asp-validation-for="Ward" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BankAccount" class="control-label"></label>
+                        <input asp-for="BankAccount" class="form-control" />
+                        <span asp-validation-for="BankAccount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BankName" class="control-label"></label>
+                        <input asp-for="BankName" class="form-control" />
+                        <span asp-validation-for="BankName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Occupation" class="control-label"></label>
+                        <input asp-for="Occupation" class="form-control" />
+                        <span asp-validation-for="Occupation" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Workplace" class="control-label"></label>
+                        <input asp-for="Workplace" class="form-control" />
+                        <span asp-validation-for="Workplace" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EmergencyContact" class="control-label"></label>
+                        <input asp-for="EmergencyContact" class="form-control" />
+                        <span asp-validation-for="EmergencyContact" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmergencyPhone" class="control-label"></label>
+                        <input asp-for="EmergencyPhone" class="form-control" />
+                        <span asp-validation-for="EmergencyPhone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Consultant" class="control-label"></label>
+                        <input asp-for="Consultant" class="form-control" />
+                        <span asp-validation-for="Consultant" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConsultantPhone" class="control-label"></label>
+                        <input asp-for="ConsultantPhone" class="form-control" />
+                        <span asp-validation-for="ConsultantPhone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="AccessCode" class="control-label"></label>
+                        <input asp-for="AccessCode" class="form-control" />
+                        <span asp-validation-for="AccessCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IsForeigner" class="control-label"></label>
+                        <input asp-for="IsForeigner" class="form-control" type="checkbox" />
+                        <span asp-validation-for="IsForeigner" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Note" class="control-label"></label>
+                        <textarea asp-for="Note" class="form-control"></textarea>
+                        <span asp-validation-for="Note" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="RepresentativeImageFile" class="control-label"></label>
+                        <div class="input-group">
+                            <input asp-for="RepresentativeImageFile" class="form-control" type="file" accept="image/*" data-val="false" />
+                            <input type="hidden" asp-for="RepresentativeImage" />
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.RepresentativeImage))
+                        {
+                            <div class="mt-2">
+                                <label>Ảnh hiện tại:</label>
+                                <img src="@Model.RepresentativeImage" alt="Ảnh đại diện" class="img-thumbnail" style="max-width: 200px;" />
+                                <input type="hidden" name="CurrentRepresentativeImage" value="@Model.RepresentativeImage" />
+                            </div>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FrontIdentityCardFile" class="control-label"></label>
+                        <div class="input-group">
+                            <input asp-for="FrontIdentityCardFile" class="form-control" type="file" accept="image/*" data-val="false" />
+                            <input type="hidden" asp-for="FrontIdentityCard" />
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.FrontIdentityCard))
+                        {
+                            <div class="mt-2">
+                                <label>Ảnh hiện tại:</label>
+                                <img src="@Model.FrontIdentityCard" alt="CCCD mặt trước" class="img-thumbnail" style="max-width: 200px;" />
+                                <input type="hidden" name="CurrentFrontIdentityCard" value="@Model.FrontIdentityCard" />
+                            </div>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="BackIdentityCardFile" class="control-label"></label>
+                        <div class="input-group">
+                            <input asp-for="BackIdentityCardFile" class="form-control" type="file" accept="image/*" data-val="false" />
+                            <input type="hidden" asp-for="BackIdentityCard" />
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.BackIdentityCard))
+                        {
+                            <div class="mt-2">
+                                <label>Ảnh hiện tại:</label>
+                                <img src="@Model.BackIdentityCard" alt="CCCD mặt sau" class="img-thumbnail" style="max-width: 200px;" />
+                                <input type="hidden" name="CurrentBackIdentityCard" value="@Model.BackIdentityCard" />
+                            </div>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PortraitFile" class="control-label"></label>
+                        <div class="input-group">
+                            <input asp-for="PortraitFile" class="form-control" type="file" accept="image/*" data-val="false" />
+                            <input type="hidden" asp-for="Portrait" />
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.Portrait))
+                        {
+                            <div class="mt-2">
+                                <label>Ảnh hiện tại:</label>
+                                <img src="@Model.Portrait" alt="Hộ chiếu" class="img-thumbnail" style="max-width: 200px;" />
+                                <input type="hidden" name="CurrentPortrait" value="@Model.Portrait" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        // Tắt validation cho các trường file
+        $(document).ready(function() {
+            $('input[type="file"]').each(function() {
+                $(this).attr('data-val', 'false');
+                $(this).removeAttr('data-val-required');
+            });
+        });
+
+        // Xử lý preview ảnh
+        function readURL(input, imgElement) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $(imgElement).attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Xử lý khi chọn file mới
+        $('input[type="file"]').change(function() {
+            var imgElement = $(this).closest('.form-group').find('img');
+            if (imgElement.length > 0) {
+                readURL(this, imgElement);
+            }
+        });
+
+        // Xử lý form submit
+        $('form').submit(function() {
+            // Đảm bảo các trường ảnh không bị validate
+            $('input[type="file"]').each(function() {
+                $(this).removeAttr('data-val');
+                $(this).removeAttr('data-val-required');
+            });
+            return true;
+        });
+    </script>
+} 

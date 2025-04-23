@@ -1,0 +1,177 @@
+@model QLNT.Models.ContractViewModel
+
+@{
+    ViewData["Title"] = "Sửa hợp đồng";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="ContractNumber" class="control-label"></label>
+                            <input asp-for="ContractNumber" class="form-control" />
+                            <span asp-validation-for="ContractNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="BuildingId" class="control-label"></label>
+                            <select asp-for="BuildingId" class="form-control" asp-items="ViewBag.BuildingId">
+                                <option value="">-- Chọn tòa nhà --</option>
+                            </select>
+                            <span asp-validation-for="BuildingId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RoomId" class="control-label"></label>
+                            <select asp-for="RoomId" class="form-control" asp-items="ViewBag.RoomId">
+                                <option value="">-- Chọn phòng --</option>
+                            </select>
+                            <span asp-validation-for="RoomId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CustomerId" class="control-label"></label>
+                            <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId">
+                                <option value="">-- Chọn khách hàng --</option>
+                            </select>
+                            <span asp-validation-for="CustomerId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="SignDate" class="control-label"></label>
+                            <input asp-for="SignDate" class="form-control" type="date" />
+                            <span asp-validation-for="SignDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="StartDate" class="control-label"></label>
+                            <input asp-for="StartDate" class="form-control" type="date" />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="EndDate" class="control-label"></label>
+                            <input asp-for="EndDate" class="form-control" type="date" />
+                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Representative" class="control-label"></label>
+                            <input asp-for="Representative" class="form-control" />
+                            <span asp-validation-for="Representative" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RentalPrice" class="control-label"></label>
+                            <input asp-for="RentalPrice" class="form-control" type="number" step="0.01" />
+                            <span asp-validation-for="RentalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PaymentCycle" class="control-label"></label>
+                            <select asp-for="PaymentCycle" class="form-control">
+                                <option value="Tháng">Tháng</option>
+                                <option value="Quý">Quý</option>
+                                <option value="Năm">Năm</option>
+                            </select>
+                            <span asp-validation-for="PaymentCycle" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PaymentStartDate" class="control-label"></label>
+                            <input asp-for="PaymentStartDate" class="form-control" type="date" />
+                            <span asp-validation-for="PaymentStartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Deposit" class="control-label"></label>
+                            <input asp-for="Deposit" class="form-control" type="number" step="0.01" />
+                            <span asp-validation-for="Deposit" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="DiscountMonths" class="control-label"></label>
+                            <input asp-for="DiscountMonths" class="form-control" type="number" />
+                            <span asp-validation-for="DiscountMonths" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="MonthlyDiscount" class="control-label"></label>
+                            <input asp-for="MonthlyDiscount" class="form-control" type="number" step="0.01" />
+                            <span asp-validation-for="MonthlyDiscount" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Status" class="control-label"></label>
+                            <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<ContractStatus>()">
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Note" class="control-label"></label>
+                    <textarea asp-for="Note" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Note" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="InvoiceTemplate" class="control-label"></label>
+                    <input asp-for="InvoiceTemplate" class="form-control" />
+                    <span asp-validation-for="InvoiceTemplate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Lưu" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            // Load rooms based on selected building
+            $("#BuildingId").change(function() {
+                var buildingId = $(this).val();
+                $.get("/Contract/GetRoomsByBuilding", { buildingId: buildingId }, function(data) {
+                    var roomSelect = $("#RoomId");
+                    roomSelect.empty();
+                    roomSelect.append('<option value="">-- Chọn phòng --</option>');
+                    $.each(data, function(index, item) {
+                        roomSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                    });
+                });
+            });
+
+            // Load rooms when page loads if building is selected
+            var selectedBuildingId = $("#BuildingId").val();
+            if (selectedBuildingId) {
+                $.get("/Contract/GetRoomsByBuilding", { buildingId: selectedBuildingId }, function(data) {
+                    var roomSelect = $("#RoomId");
+                    roomSelect.empty();
+                    roomSelect.append('<option value="">-- Chọn phòng --</option>');
+                    $.each(data, function(index, item) {
+                        var selected = item.id == @Model.RoomId ? 'selected' : '';
+                        roomSelect.append('<option value="' + item.id + '" ' + selected + '>' + item.name + '</option>');
+                    });
+                });
+            }
+        });
+    </script>
+} 

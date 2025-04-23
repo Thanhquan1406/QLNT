@@ -1,0 +1,381 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QLNT.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QLNT.j9576t4oj5.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\0f3b16fa-f371-4960-80f7-12ca06283e77_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\0f3b16fa-f371-4960-80f7-12ca06283e77_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\145dde3e-1113-4b9a-987f-699701b24c59_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\145dde3e-1113-4b9a-987f-699701b24c59_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\16df5816-c199-4232-8eb9-eb950f91de21_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\16df5816-c199-4232-8eb9-eb950f91de21_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\5542f28c-c896-4a3b-9781-1d3cd68ab39a_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\5542f28c-c896-4a3b-9781-1d3cd68ab39a_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\73f8957d-6d58-4227-bc2d-40874e850b22_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\73f8957d-6d58-4227-bc2d-40874e850b22_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\bee94d7c-3a40-4560-8c3f-f7f990128b86_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\bee94d7c-3a40-4560-8c3f-f7f990128b86_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\c0f013b3-e88e-4b26-b139-dc64ae820657_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\c0f013b3-e88e-4b26-b139-dc64ae820657_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\c2902365-5154-4c97-ad17-6a9909a11c14_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\identity_card\\c2902365-5154-4c97-ad17-6a9909a11c14_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\0c52d748-e2a0-4d1d-8cd7-914eb5624d25_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\0c52d748-e2a0-4d1d-8cd7-914eb5624d25_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\205b9151-6aef-46e7-a5ec-d9bbc37d8d49_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\205b9151-6aef-46e7-a5ec-d9bbc37d8d49_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\2ad7280d-1f04-48ff-ad2f-a85b760a0484_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\2ad7280d-1f04-48ff-ad2f-a85b760a0484_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\567a07bd-f39d-4cf6-b1fb-132075cf7316_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\567a07bd-f39d-4cf6-b1fb-132075cf7316_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\7a6d9720-b0e6-4aa0-b80d-cf8b39c53595_Hình nền chất cool.jpg",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\7a6d9720-b0e6-4aa0-b80d-cf8b39c53595_Hình nền chất cool.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\portrait\\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\portrait\\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\1150b4e7-7d67-4ceb-9644-1a82faeb844a_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\1150b4e7-7d67-4ceb-9644-1a82faeb844a_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\28dc18b0-6c25-4980-bbd0-47f16e8c1506_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\28dc18b0-6c25-4980-bbd0-47f16e8c1506_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\a5d35765-0278-4dba-b6dc-5bb88732c4ed_Hình nền chất cool.jpg",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\a5d35765-0278-4dba-b6dc-5bb88732c4ed_Hình nền chất cool.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\a65875ef-fc46-4bb8-a061-5121dfa0df02_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\a65875ef-fc46-4bb8-a061-5121dfa0df02_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\representative\\fe2751dc-ab39-4133-9b91-e65fede8bce7_Nha tro test.png",
+      "PackagePath": "staticwebassets\\Images\\customers\\representative\\fe2751dc-ab39-4133-9b91-e65fede8bce7_Nha tro test.png"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QLNT.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QLNT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.QLNT.props",
+      "PackagePath": "build\\QLNT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.QLNT.props",
+      "PackagePath": "buildMultiTargeting\\QLNT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.QLNT.props",
+      "PackagePath": "buildTransitive\\QLNT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

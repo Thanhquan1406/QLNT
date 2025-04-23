@@ -1,0 +1,190 @@
+@model QLNT.Models.Room
+
+@{
+    ViewData["Title"] = "Sửa thông tin phòng";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Html.Raw(TempData["ErrorMessage"])
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h1>Sửa thông tin phòng</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" id="editForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Code" />
+            
+            <div class="form-group mb-3">
+                <label asp-for="Code" class="control-label">Mã phòng</label>
+                <input asp-for="Code" class="form-control" readonly />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BuildingId" class="control-label">Tòa nhà</label>
+                <select asp-for="BuildingId" class="form-control" asp-items="ViewBag.Buildings">
+                    <option value="">-- Chọn tòa nhà --</option>
+                </select>
+                <span asp-validation-for="BuildingId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Floor" class="control-label">Tầng <span class="text-danger">*</span></label>
+                <input asp-for="Floor" class="form-control" required />
+                <span asp-validation-for="Floor" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label">Tên phòng <span class="text-danger">*</span></label>
+                <input asp-for="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="RentalFee" class="control-label">Giá thuê <span class="text-danger">*</span></label>
+                <input asp-for="RentalFee" class="form-control" required />
+                <span asp-validation-for="RentalFee" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Status" class="control-label">Trạng thái <span class="text-danger">*</span></label>
+                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<RoomStatus>()" required>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <div class="form-check">
+                    <input type="checkbox" asp-for="IsActive" class="form-check-input" />
+                    <label asp-for="IsActive" class="form-check-label">Hoạt động</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            // Log dữ liệu ban đầu khi trang load
+            console.log('Dữ liệu ban đầu khi load trang:');
+            logFormData();
+
+            // Log khi có thay đổi trên form
+            $('#editForm input, #editForm select').on('change', function() {
+                console.log('Thay đổi trên form:');
+                console.log('Trường thay đổi:', $(this).attr('name'));
+                console.log('Giá trị mới:', $(this).val());
+                logFormData();
+            });
+
+            // Log khi submit form
+            $('#editForm').on('submit', function(e) {
+                console.log('Dữ liệu khi submit form:');
+                logFormData();
+                
+                // Log validation
+                console.log('Kiểm tra validation:');
+                var isValid = this.checkValidity();
+                console.log('Form hợp lệ:', isValid);
+                
+                if (!isValid) {
+                    console.log('Lỗi validation:');
+                    $(this).find(':invalid').each(function() {
+                        console.log('Trường:', $(this).attr('name'));
+                        console.log('Lỗi:', $(this).validationMessage);
+                    });
+                }
+            });
+
+            // Hàm log dữ liệu form
+            function logFormData() {
+                var formData = {
+                    Id: $('#Id').val(),
+                    Code: $('#Code').val(),
+                    BuildingId: $('#BuildingId').val(),
+                    Floor: $('#Floor').val(),
+                    Name: $('#Name').val(),
+                    RentalFee: $('#RentalFee').val(),
+                    Status: $('#Status').val(),
+                    IsActive: $('#IsActive').is(':checked')
+                };
+                console.log('Toàn bộ dữ liệu form:', formData);
+                console.log('Dữ liệu gửi đi:', $('#editForm').serialize());
+            }
+
+            // Khôi phục dữ liệu từ localStorage nếu có
+            function restoreFormData() {
+                var savedData = localStorage.getItem('roomEditData');
+                if (savedData) {
+                    console.log('Khôi phục dữ liệu từ localStorage:');
+                    var data = JSON.parse(savedData);
+                    console.log('Dữ liệu khôi phục:', data);
+                    
+                    $('#BuildingId').val(data.BuildingId);
+                    $('#Floor').val(data.Floor);
+                    $('#Name').val(data.Name);
+                    $('#RentalFee').val(data.RentalFee);
+                    $('#Status').val(data.Status);
+                    $('#IsActive').prop('checked', data.IsActive);
+                }
+            }
+
+            // Lưu dữ liệu vào localStorage
+            function saveFormData() {
+                var formData = {
+                    BuildingId: $('#BuildingId').val(),
+                    Floor: $('#Floor').val(),
+                    Name: $('#Name').val(),
+                    RentalFee: $('#RentalFee').val(),
+                    Status: $('#Status').val(),
+                    IsActive: $('#IsActive').is(':checked')
+                };
+                localStorage.setItem('roomEditData', JSON.stringify(formData));
+            }
+
+            // Khôi phục dữ liệu khi trang load
+            restoreFormData();
+
+            // Lưu dữ liệu khi có thay đổi
+            $('#editForm input, #editForm select').on('change', function() {
+                saveFormData();
+            });
+
+            // Thêm validation cho form
+            $('#editForm').on('submit', function(e) {
+                if (!this.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                $(this).addClass('was-validated');
+                
+                // Lưu dữ liệu trước khi submit
+                saveFormData();
+            });
+        });
+    </script>
+} 

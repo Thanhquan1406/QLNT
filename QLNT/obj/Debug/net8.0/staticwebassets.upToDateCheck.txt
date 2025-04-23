@@ -1,0 +1,88 @@
+wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\Images\customers\identity_card\0f3b16fa-f371-4960-80f7-12ca06283e77_Nha tro test.png
+wwwroot\Images\customers\identity_card\145dde3e-1113-4b9a-987f-699701b24c59_Nha tro test.png
+wwwroot\Images\customers\identity_card\16df5816-c199-4232-8eb9-eb950f91de21_Nha tro test.png
+wwwroot\Images\customers\identity_card\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png
+wwwroot\Images\customers\identity_card\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg
+wwwroot\Images\customers\identity_card\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png
+wwwroot\Images\customers\identity_card\5542f28c-c896-4a3b-9781-1d3cd68ab39a_Nha tro test.png
+wwwroot\Images\customers\identity_card\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png
+wwwroot\Images\customers\identity_card\73f8957d-6d58-4227-bc2d-40874e850b22_Nha tro test.png
+wwwroot\Images\customers\identity_card\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png
+wwwroot\Images\customers\identity_card\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png
+wwwroot\Images\customers\identity_card\bee94d7c-3a40-4560-8c3f-f7f990128b86_Nha tro test.png
+wwwroot\Images\customers\identity_card\c0f013b3-e88e-4b26-b139-dc64ae820657_Nha tro test.png
+wwwroot\Images\customers\identity_card\c2902365-5154-4c97-ad17-6a9909a11c14_Nha tro test.png
+wwwroot\Images\customers\portrait\0c52d748-e2a0-4d1d-8cd7-914eb5624d25_Nha tro test.png
+wwwroot\Images\customers\portrait\205b9151-6aef-46e7-a5ec-d9bbc37d8d49_Nha tro test.png
+wwwroot\Images\customers\portrait\2ad7280d-1f04-48ff-ad2f-a85b760a0484_Nha tro test.png
+wwwroot\Images\customers\portrait\567a07bd-f39d-4cf6-b1fb-132075cf7316_Nha tro test.png
+wwwroot\Images\customers\portrait\7a6d9720-b0e6-4aa0-b80d-cf8b39c53595_Hình nền chất cool.jpg
+wwwroot\Images\customers\portrait\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png
+wwwroot\Images\customers\portrait\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png
+wwwroot\Images\customers\representative\1150b4e7-7d67-4ceb-9644-1a82faeb844a_Nha tro test.png
+wwwroot\Images\customers\representative\28dc18b0-6c25-4980-bbd0-47f16e8c1506_Nha tro test.png
+wwwroot\Images\customers\representative\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png
+wwwroot\Images\customers\representative\a5d35765-0278-4dba-b6dc-5bb88732c4ed_Hình nền chất cool.jpg
+wwwroot\Images\customers\representative\a65875ef-fc46-4bb8-a061-5121dfa0df02_Nha tro test.png
+wwwroot\Images\customers\representative\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png
+wwwroot\Images\customers\representative\fe2751dc-ab39-4133-9b91-e65fede8bce7_Nha tro test.png
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt

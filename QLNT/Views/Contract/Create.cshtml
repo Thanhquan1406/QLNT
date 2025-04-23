@@ -1,0 +1,197 @@
+@model QLNT.Models.ContractViewModel
+
+@{
+    ViewData["Title"] = "Tạo hợp đồng mới";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create" id="contractForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="ContractNumber" class="control-label">Số hợp đồng</label>
+                            <input asp-for="ContractNumber" class="form-control" required />
+                            <span asp-validation-for="ContractNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="BuildingId" class="control-label">Tòa nhà</label>
+                            <select asp-for="BuildingId" class="form-control" asp-items="ViewBag.BuildingId" required>
+                                <option value="">-- Chọn tòa nhà --</option>
+                            </select>
+                            <span asp-validation-for="BuildingId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RoomId" class="control-label">Phòng</label>
+                            <select asp-for="RoomId" class="form-control" asp-items="ViewBag.RoomId" required>
+                                <option value="">-- Chọn phòng --</option>
+                            </select>
+                            <span asp-validation-for="RoomId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CustomerId" class="control-label">Khách hàng</label>
+                            <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId" required>
+                                <option value="">-- Chọn khách hàng --</option>
+                            </select>
+                            <span asp-validation-for="CustomerId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="SignDate" class="control-label">Ngày ký</label>
+                            <input asp-for="SignDate" class="form-control" type="date" required />
+                            <span asp-validation-for="SignDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="StartDate" class="control-label">Ngày bắt đầu</label>
+                            <input asp-for="StartDate" class="form-control" type="date" required />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="EndDate" class="control-label">Ngày kết thúc</label>
+                            <input asp-for="EndDate" class="form-control" type="date" required />
+                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Representative" class="control-label">Người đại diện</label>
+                            <input asp-for="Representative" class="form-control" required />
+                            <span asp-validation-for="Representative" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RentalPrice" class="control-label">Giá thuê</label>
+                            <input asp-for="RentalPrice" class="form-control" type="number" step="0.01" required />
+                            <span asp-validation-for="RentalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PaymentCycle" class="control-label">Chu kỳ thanh toán</label>
+                            <select asp-for="PaymentCycle" class="form-control" required>
+                                <option value="">-- Chọn chu kỳ --</option>
+                                <option value="Tháng">Tháng</option>
+                                <option value="Quý">Quý</option>
+                                <option value="Năm">Năm</option>
+                            </select>
+                            <span asp-validation-for="PaymentCycle" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PaymentStartDate" class="control-label">Ngày bắt đầu thanh toán</label>
+                            <input asp-for="PaymentStartDate" class="form-control" type="date" required />
+                            <span asp-validation-for="PaymentStartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Deposit" class="control-label">Tiền đặt cọc</label>
+                            <input asp-for="Deposit" class="form-control" type="number" step="0.01" required />
+                            <span asp-validation-for="Deposit" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="DepositPaid" class="control-label">Tiền đã đặt cọc</label>
+                            <input asp-for="DepositPaid" class="form-control" type="number" step="0.01" required />
+                            <span asp-validation-for="DepositPaid" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="DepositRemaining" class="control-label">Tiền cọc còn phải đóng</label>
+                            <input asp-for="DepositRemaining" class="form-control" type="number" step="0.01" required />
+                            <span asp-validation-for="DepositRemaining" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="DiscountMonths" class="control-label">Số tháng giảm giá</label>
+                            <input asp-for="DiscountMonths" class="form-control" type="number" min="0" />
+                            <span asp-validation-for="DiscountMonths" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="MonthlyDiscount" class="control-label">Giảm giá hàng tháng</label>
+                            <input asp-for="MonthlyDiscount" class="form-control" type="number" step="0.01" min="0" />
+                            <span asp-validation-for="MonthlyDiscount" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Note" class="control-label">Ghi chú</label>
+                    <textarea asp-for="Note" class="form-control" rows="3" required></textarea>
+                    <span asp-validation-for="Note" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="InvoiceTemplate" class="control-label">Mẫu hóa đơn</label>
+                    <input asp-for="InvoiceTemplate" class="form-control" required />
+                    <span asp-validation-for="InvoiceTemplate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Tạo" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            // Load rooms based on selected building
+            $("#BuildingId").change(function() {
+                var buildingId = $(this).val();
+                var roomSelect = $("#RoomId");
+                
+                roomSelect.empty();
+                roomSelect.append('<option value="">-- Chọn phòng --</option>');
+                
+                if (buildingId) {
+                    $.get("/Contract/GetRoomsByBuilding", { buildingId: buildingId }, function(data) {
+                        if (data && data.length > 0) {
+                            $.each(data, function(index, item) {
+                                roomSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                            });
+                        } else {
+                            roomSelect.append('<option value="" disabled>Không có phòng nào trong tòa nhà này</option>');
+                        }
+                    }).fail(function() {
+                        roomSelect.append('<option value="" disabled>Không thể tải danh sách phòng</option>');
+                    });
+                }
+            });
+
+            // Validate dates
+            $("#contractForm").submit(function(e) {
+                var startDate = new Date($("#StartDate").val());
+                var endDate = new Date($("#EndDate").val());
+                var signDate = new Date($("#SignDate").val());
+
+                if (startDate > endDate) {
+                    alert("Ngày bắt đầu phải nhỏ hơn ngày kết thúc");
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (signDate > startDate) {
+                    alert("Ngày ký phải nhỏ hơn hoặc bằng ngày bắt đầu");
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        });
+    </script>
+} 

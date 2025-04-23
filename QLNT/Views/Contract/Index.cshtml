@@ -1,0 +1,60 @@
+@model IEnumerable<QLNT.Models.Contract>
+@using QLNT.Extensions
+
+@{
+    ViewData["Title"] = "Danh sách hợp đồng";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Tạo hợp đồng mới</a>
+        <a asp-action="Active" class="btn btn-success">Hợp đồng đang hoạt động</a>
+        <a asp-action="Expiring" class="btn btn-warning">Hợp đồng sắp hết hạn</a>
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ContractNumber)</th>
+                    <th>@Html.DisplayNameFor(model => model.Room.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Customer.FullName)</th>
+                    <th>@Html.DisplayNameFor(model => model.StartDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.EndDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.RentalPrice)</th>
+                    <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ContractNumber)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Room.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Customer.FullName)</td>
+                        <td>@item.StartDate.ToString("dd/MM/yyyy")</td>
+                        <td>@item.EndDate.ToString("dd/MM/yyyy")</td>
+                        <td>@item.RentalPrice.ToString("N0")</td>
+                        <td>
+                            <span class="badge @(item.Status == ContractStatus.Active ? "bg-success" :
+                                                item.Status == ContractStatus.AboutToExpire ? "bg-warning" :
+                                                item.Status == ContractStatus.Expired ? "bg-danger" : "bg-secondary")">
+                                @item.Status.GetDisplayName()
+                            </span>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Chi tiết</a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Sửa</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Xóa</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div> 
