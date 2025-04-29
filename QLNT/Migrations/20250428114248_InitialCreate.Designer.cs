@@ -12,8 +12,8 @@ using QLNT.Data;
 namespace QLNT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250422081013_UpdateContractConfiguration")]
-    partial class UpdateContractConfiguration
+    [Migration("20250428114248_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,6 +83,31 @@ namespace QLNT.Migrations
                     b.ToTable("Buildings");
                 });
 
+            modelBuilder.Entity("QLNT.Models.BuildingService", b =>
+                {
+                    b.Property<int>("BuildingId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.HasKey("BuildingId", "ServiceId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("BuildingServices");
+                });
+
             modelBuilder.Entity("QLNT.Models.Contract", b =>
                 {
                     b.Property<int>("Id")
@@ -145,8 +170,8 @@ namespace QLNT.Migrations
 
                     b.Property<string>("Representative")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
@@ -313,6 +338,63 @@ namespace QLNT.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("QLNT.Models.MeterLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("IsCurrentMeter")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("MeterName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MeterType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Month")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<double>("NewReading")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("float(18)");
+
+                    b.Property<double>("OldReading")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("float(18)");
+
+                    b.Property<DateTime>("ReadingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("MeterLogs");
+                });
+
             modelBuilder.Entity("QLNT.Models.Room", b =>
                 {
                     b.Property<int>("Id")
@@ -372,6 +454,67 @@ namespace QLNT.Migrations
                     b.ToTable("Rooms");
                 });
 
+            modelBuilder.Entity("QLNT.Models.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("PriceType")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.Property<string>("ServiceCode")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("ServiceName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("ServiceType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Unit")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("QLNT.Models.BuildingService", b =>
+                {
+                    b.HasOne("QLNT.Models.Building", "Building")
+                        .WithMany("BuildingServices")
+                        .HasForeignKey("BuildingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QLNT.Models.Service", "Service")
+                        .WithMany("BuildingServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Building");
+
+                    b.Navigation("Service");
+                });
+
             modelBuilder.Entity("QLNT.Models.Contract", b =>
                 {
                     b.HasOne("QLNT.Models.Customer", "Customer")
@@ -391,6 +534,17 @@ namespace QLNT.Migrations
                     b.Navigation("Room");
                 });
 
+            modelBuilder.Entity("QLNT.Models.MeterLog", b =>
+                {
+                    b.HasOne("QLNT.Models.Room", "Room")
+                        .WithMany("MeterLogs")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+                });
+
             modelBuilder.Entity("QLNT.Models.Room", b =>
                 {
                     b.HasOne("QLNT.Models.Building", "Building")
@@ -404,6 +558,8 @@ namespace QLNT.Migrations
 
             modelBuilder.Entity("QLNT.Models.Building", b =>
                 {
+                    b.Navigation("BuildingServices");
+
                     b.Navigation("Rooms");
                 });
 
@@ -415,6 +571,13 @@ namespace QLNT.Migrations
             modelBuilder.Entity("QLNT.Models.Room", b =>
                 {
                     b.Navigation("Contracts");
+
+                    b.Navigation("MeterLogs");
+                });
+
+            modelBuilder.Entity("QLNT.Models.Service", b =>
+                {
+                    b.Navigation("BuildingServices");
                 });
 #pragma warning restore 612, 618
         }

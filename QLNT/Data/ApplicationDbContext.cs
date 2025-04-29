@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using QLNT.Models;
+using QLNT.Models.ViewModels;
 
 namespace QLNT.Data
 {
@@ -14,15 +15,48 @@ namespace QLNT.Data
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Contract> Contracts { get; set; }
-
-        // Thêm các DbSet cho các model của bạn ở đây
-        // Ví dụ:
-        // public DbSet<YourModel> YourModels { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<BuildingService> BuildingServices { get; set; }
+        public DbSet<MeterLog> MeterLogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             
+            // Cấu hình Service
+            modelBuilder.Entity<Service>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.ServiceName).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.ServiceType).IsRequired();
+                entity.Property(e => e.PriceType).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Description).HasMaxLength(1000);
+                entity.Property(e => e.Price).HasPrecision(18, 2);
+                entity.Property(e => e.Unit).IsRequired().HasMaxLength(50);
+            });
+
+            // Cấu hình BuildingService (bảng trung gian)
+            modelBuilder.Entity<BuildingService>(entity =>
+            {
+                entity.HasKey(bs => new { bs.BuildingId, bs.ServiceId });
+
+                entity.HasOne(bs => bs.Building)
+                    .WithMany(b => b.BuildingServices)
+                    .HasForeignKey(bs => bs.BuildingId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(bs => bs.Service)
+                    .WithMany(s => s.BuildingServices)
+                    .HasForeignKey(bs => bs.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+                
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(true);
+            });
+
             // Cấu hình Building
             modelBuilder.Entity<Building>(entity =>
             {
@@ -132,6 +166,27 @@ namespace QLNT.Data
                 .WithMany(b => b.Rooms)
                 .HasForeignKey(r => r.BuildingId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Cấu hình MeterLog
+            modelBuilder.Entity<MeterLog>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.MeterType).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.MeterName).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Month).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.OldReading).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.NewReading).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.ReadingDate).IsRequired();
+                entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.IsCurrentMeter).HasDefaultValue(false);
+
+                // Cấu hình quan hệ với Room
+                entity.HasOne(ml => ml.Room)
+                    .WithMany(r => r.MeterLogs)
+                    .HasForeignKey(ml => ml.RoomId)
+                    .IsRequired()
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
         }
     }
 } 

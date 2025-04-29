@@ -13,5 +13,6 @@ namespace QLNT.Repository
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
         Task<IEnumerable<Room>> GetByBuildingIdAsync(int buildingId);
+        Task<IEnumerable<string>> GetRoomsByBuildingCodeAsync(string buildingCode);
     }
 }

@@ -1,0 +1,48 @@
+@model QLNT.Models.Service
+
+@{
+    ViewData["Title"] = "Xóa dịch vụ";
+}
+
+<div class="container">
+    <h1>Xóa dịch vụ</h1>
+
+    <h3>Bạn có chắc chắn muốn xóa dịch vụ này?</h3>
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ServiceName)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ServiceName)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ServiceType)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ServiceType)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.PriceType)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.PriceType)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Description)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Price)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Price)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Unit)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Unit)</dd>
+
+                <dt class="col-sm-3">Tòa nhà sử dụng</dt>
+                <dd class="col-sm-9">
+                    @foreach (var building in Model.Buildings)
+                    {
+                        <span class="badge bg-primary">@building.Name</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <form asp-action="Delete" class="mt-3">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Xóa" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div> 

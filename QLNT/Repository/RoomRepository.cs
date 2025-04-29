@@ -32,13 +32,9 @@ namespace QLNT.Repository
         {
             try
             {
-                // Tạo mã phòng tự động
-                var building = await _context.Buildings.FindAsync(room.BuildingId);
-                if (building != null)
-                {
-                    var roomCount = await _context.Rooms.CountAsync(r => r.BuildingId == room.BuildingId);
-                    room.Code = $"{building.Code}-{room.Floor}-{roomCount + 1:D3}";
-                }
+                // Tạo mã phòng tự động dựa trên số lượng phòng hiện có
+                var roomCount = await _context.Rooms.CountAsync();
+                room.Code = $"P{roomCount + 1:D4}"; // Format: P0001, P0002, ...
 
                 room.Status = RoomStatus.Available;
                 room.IsActive = true;
@@ -88,7 +84,18 @@ namespace QLNT.Repository
         public async Task<IEnumerable<Room>> GetByBuildingIdAsync(int buildingId)
         {
             return await _context.Rooms
-                .Where(r => r.BuildingId == buildingId)
+                .Include(r => r.Building)
+                .Where(r => r.BuildingId == buildingId && r.IsActive)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<string>> GetRoomsByBuildingCodeAsync(string buildingCode)
+        {
+            return await _context.Rooms
+                .Include(r => r.Building)
+                .Where(r => r.Building.Code == buildingCode && r.IsActive)
+                .Select(r => new { r.Code, r.Name })
+                .Select(r => $"{r.Code} - {r.Name}")
                 .ToListAsync();
         }
     }

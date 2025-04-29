@@ -6,11 +6,11 @@ namespace QLNT.Repository
 {
     public interface IBuildingRepository
     {
-        Task<IEnumerable<Building>> GetAllAsync();
+        Task<IEnumerable<Building>> GetAllBuildingsAsync();
         Task<Building> GetBuildingByIdAsync(int id);
-        Task<Building> AddBuildingAsync(Building building);
+        Task<Building> CreateBuildingAsync(Building building);
         Task<Building> UpdateBuildingAsync(Building building);
-        Task DeleteBuildingAsync(int id);
+        Task<bool> DeleteBuildingAsync(int id);
         Task<bool> BuildingExistsAsync(int id);
     }
 } 

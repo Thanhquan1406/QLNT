@@ -4025,11 +4025,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\QLNT.csproj",
+      "projectUniqueName": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\QLNT.csproj",
       "projectName": "QLNT",
-      "projectPath": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\QLNT.csproj",
+      "projectPath": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\QLNT.csproj",
       "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thanh\\OneDrive\\Máy tính\\GIGGIGI\\QLNT\\QLNT\\obj\\",
+      "outputPath": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

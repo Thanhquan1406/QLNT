@@ -1,142 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\",
+  "WorkspaceRootPath": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\contract\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\contract\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\meterlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\meterlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\repository\\ibuildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\ibuildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\repository\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\repository\\buildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\buildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\repository\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\models\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\room\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\room\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\wwwroot\\images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\wwwroot\\images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\wwwroot\\images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\wwwroot\\images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\wwwroot\\images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\wwwroot\\images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_nha tro test.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\customer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\customer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\customer\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\customer\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\qlnt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\qlnt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\contractcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\views\\meterlog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\meterlog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\room\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\room\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\room\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\room\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\controllers\\meterlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\meterlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\views\\meterlog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\meterlog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\building\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\building\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\viewmodels\\meterlogcreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\viewmodels\\meterlogcreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\services\\codegeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\services\\codegeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\viewmodels\\meterlogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\viewmodels\\meterlogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\services\\icodegeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\services\\icodegeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\models\\buildingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\buildingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\meterlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\meterlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\building\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\building\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\building\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\building\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\giggigi\\qlnt\\qlnt\\views\\building\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\building\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\views\\meterlog\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\views\\meterlog\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -146,416 +74,205 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
+              "RelativeToolTip": "QLNT\\Models\\Customer.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwE8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:11:53.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Contract\\Index.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Contract\\Index.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Contract\\Index.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Contract\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-22T09:28:41.05Z",
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
+              "RelativeToolTip": "QLNT\\Models\\Service.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAA6wHYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:11:37.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContractController.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\ContractController.cs",
-              "RelativeDocumentMoniker": "QLNT\\Controllers\\ContractController.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\ContractController.cs",
-              "RelativeToolTip": "QLNT\\Controllers\\ContractController.cs",
-              "ViewState": "AgIAABgBAAAAAAAAAAAAwCQBAABPAAAAAAAAAA==",
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Room.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Room.cs",
+              "RelativeToolTip": "QLNT\\Models\\Room.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwEcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T08:19:10.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IBuildingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\IBuildingRepository.cs",
-              "RelativeDocumentMoniker": "QLNT\\Repository\\IBuildingRepository.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\IBuildingRepository.cs",
-              "RelativeToolTip": "QLNT\\Repository\\IBuildingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:11:23.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RoomRepository.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\RoomRepository.cs",
-              "RelativeDocumentMoniker": "QLNT\\Repository\\RoomRepository.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\RoomRepository.cs",
-              "RelativeToolTip": "QLNT\\Repository\\RoomRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:10:28.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BuildingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\BuildingRepository.cs",
-              "RelativeDocumentMoniker": "QLNT\\Repository\\BuildingRepository.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\BuildingRepository.cs",
-              "RelativeToolTip": "QLNT\\Repository\\BuildingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:07:55.324Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Program.cs",
-              "RelativeDocumentMoniker": "QLNT\\Program.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Program.cs",
-              "RelativeToolTip": "QLNT\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:14:59.634Z"
+              "WhenOpened": "2025-04-28T12:11:23.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "QLNT\\Controllers\\RoomController.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "QLNT\\Controllers\\RoomController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAxwDAAAAA+AAAAAAAAAA==",
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Contract.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Contract.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Contract.cs",
+              "RelativeToolTip": "QLNT\\Models\\Contract.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAA+wF0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T08:36:10.799Z"
+              "WhenOpened": "2025-04-28T12:11:19.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "QLNT\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "QLNT\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAL0BAAAAAAAAAAAQwMoBAABAAAAAAAAAAA==",
+              "Title": "Building.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Building.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Building.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Building.cs",
+              "RelativeToolTip": "QLNT\\Models\\Building.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwDYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T07:56:35.783Z"
+              "WhenOpened": "2025-04-28T12:10:06.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ContractController.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ContractController.cs",
+              "RelativeDocumentMoniker": "QLNT\\Controllers\\ContractController.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ContractController.cs",
+              "RelativeToolTip": "QLNT\\Controllers\\ContractController.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAuwDMBAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:51:23.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MeterLog.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\MeterLog.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\MeterLog.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\MeterLog.cs",
+              "RelativeToolTip": "QLNT\\Models\\MeterLog.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwC4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:41:01.093Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IRoomRepository.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\IRoomRepository.cs",
-              "RelativeDocumentMoniker": "QLNT\\Repository\\IRoomRepository.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\IRoomRepository.cs",
-              "RelativeToolTip": "QLNT\\Repository\\IRoomRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "QLNT\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "QLNT\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:48:35.191Z"
+              "WhenOpened": "2025-04-28T10:52:57.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "QLNT\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "QLNT\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAQwHUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T07:16:27.551Z"
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Index.cshtml",
+              "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Index.cshtml",
+              "RelativeToolTip": "QLNT\\Views\\MeterLog\\Index.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwEMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T10:50:11.844Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Edit.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Customer\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Edit.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Customer\\Edit.cshtml",
-              "ViewState": "AgIAAAMBAAAAAAAAAAAQwAsBAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T07:44:00.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Building.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\Building.cs",
-              "RelativeDocumentMoniker": "QLNT\\Models\\Building.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\Building.cs",
-              "RelativeToolTip": "QLNT\\Models\\Building.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA0wCEAAABBAAAAAAAAAA==",
+              "Title": "MeterLogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
+              "RelativeToolTip": "QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:47:11.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Details.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Customer\\Details.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Details.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Customer\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T07:43:39.125Z"
+              "WhenOpened": "2025-04-28T10:08:41.646Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Edit.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Room\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Edit.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Room\\Edit.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwL0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T15:44:01.93Z"
+              "Title": "MeterLogCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
+              "RelativeToolTip": "QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T10:08:22.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png",
-              "RelativeDocumentMoniker": "QLNT\\wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "RelativeToolTip": "QLNT\\wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-04-19T09:50:37.849Z",
-              "EditorCaption": " - PNG [1200x1200, 32 bit, PNG]"
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Edit.cshtml",
+              "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Edit.cshtml",
+              "RelativeToolTip": "QLNT\\Views\\MeterLog\\Edit.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T09:51:25.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MeterLogController.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\MeterLogController.cs",
+              "RelativeDocumentMoniker": "QLNT\\Controllers\\MeterLogController.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\MeterLogController.cs",
+              "RelativeToolTip": "QLNT\\Controllers\\MeterLogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T08:26:13.771Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png",
-              "RelativeDocumentMoniker": "QLNT\\wwwroot\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "RelativeToolTip": "QLNT\\wwwroot\\Images\\customers\\identity_card\\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-04-19T09:50:39.272Z",
-              "EditorCaption": " - PNG [1200x1200, 32 bit, PNG]"
+              "Title": "MeterLogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\MeterLogRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\MeterLogRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\MeterLogRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\MeterLogRepository.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAQwEYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T08:26:11.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png",
-              "RelativeDocumentMoniker": "QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "RelativeToolTip": "QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png - PNG [1200x1200, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-04-19T09:50:40.526Z",
-              "EditorCaption": " - PNG [1200x1200, 32 bit, PNG]"
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
+              "RelativeDocumentMoniker": "QLNT\\Program.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
+              "RelativeToolTip": "QLNT\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T07:42:46.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Delete.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Customer\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Delete.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Customer\\Delete.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBYAAAA3AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Delete.cshtml",
+              "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Delete.cshtml",
+              "RelativeToolTip": "QLNT\\Views\\MeterLog\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T07:42:52.406Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "QLNT\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\Customer.cs",
-              "RelativeToolTip": "QLNT\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T07:42:28.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Create.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Customer\\Create.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Create.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Customer\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T07:41:40.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Index.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Customer\\Index.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Customer\\Index.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Customer\\Index.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDMAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T07:44:37.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CustomerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\CustomerRepository.cs",
-              "RelativeDocumentMoniker": "QLNT\\Repository\\CustomerRepository.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Repository\\CustomerRepository.cs",
-              "RelativeToolTip": "QLNT\\Repository\\CustomerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T07:40:19.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Index.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Room\\Index.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Index.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Room\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T13:00:21.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Details.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Room\\Details.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Details.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Room\\Details.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T13:25:28.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "QLNT.csproj",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\QLNT.csproj",
-              "RelativeDocumentMoniker": "QLNT\\QLNT.csproj",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\QLNT.csproj",
-              "RelativeToolTip": "QLNT\\QLNT.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-18T07:49:31.741Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Delete.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Room\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Delete.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Room\\Delete.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T12:49:27.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Create.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Building\\Create.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Create.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Building\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T09:25:43.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ICodeGeneratorService.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Services\\ICodeGeneratorService.cs",
-              "RelativeDocumentMoniker": "QLNT\\Services\\ICodeGeneratorService.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Services\\ICodeGeneratorService.cs",
-              "RelativeToolTip": "QLNT\\Services\\ICodeGeneratorService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:11:18.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CodeGeneratorService.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Services\\CodeGeneratorService.cs",
-              "RelativeDocumentMoniker": "QLNT\\Services\\CodeGeneratorService.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Services\\CodeGeneratorService.cs",
-              "RelativeToolTip": "QLNT\\Services\\CodeGeneratorService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T12:48:52.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "BuildingViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\BuildingViewModel.cs",
-              "RelativeDocumentMoniker": "QLNT\\Models\\BuildingViewModel.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Models\\BuildingViewModel.cs",
-              "RelativeToolTip": "QLNT\\Models\\BuildingViewModel.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:52:30.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Create.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Room\\Create.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Room\\Create.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Room\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T10:49:29.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Index.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Building\\Index.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Index.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Building\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T09:25:25.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Details.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Building\\Details.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Details.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Building\\Details.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T08:46:58.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Delete.cshtml",
-              "RelativeDocumentMoniker": "QLNT\\Views\\Building\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\GIGGIGI\\QLNT\\QLNT\\Views\\Building\\Delete.cshtml",
-              "RelativeToolTip": "QLNT\\Views\\Building\\Delete.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-18T08:46:55.129Z"
+              "WhenOpened": "2025-04-28T07:42:24.191Z"
             }
           ]
         }

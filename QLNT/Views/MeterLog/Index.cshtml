@@ -1,0 +1,93 @@
+@model IEnumerable<QLNT.Models.MeterLog>
+
+@{
+    ViewData["Title"] = "Danh sách ghi chỉ số đồng hồ";
+}
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col text-end">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Thêm mới
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã</th>
+                            <th>Thao tác</th>
+                            <th>Công tơ</th>
+                            <th>Số cũ</th>
+                            <th>Số mới</th>
+                            <th>Tiêu thụ</th>
+                            <th>Ngày chốt</th>
+                            <th>Đã duyệt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                            @if (item.IsCurrentMeter)
+                                            {
+                                                <a asp-action="ToggleApproval" asp-route-id="@item.Id" class="btn btn-sm btn-success">
+                                                    <i class="fas fa-check"></i>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a asp-action="ToggleApproval" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">
+                                                    <i class="fas fa-times"></i>
+                                                </a>
+                                            }
+                                        </div>
+                                    </td>
+                                    <td>@(item.MeterType == "Electric" ? "CTĐ-" : "CTN-")@item.Room?.Name</td>
+                                    <td>@item.OldReading.ToString("N2")</td>
+                                    <td>@item.NewReading.ToString("N2")</td>
+                                    <td>@item.Consumption.ToString("N2")</td>
+                                    <td>@item.ReadingDate.ToString("dd-MM-yyyy")</td>
+                                    <td>
+                                        @if (item.IsCurrentMeter)
+                                        {
+                                            <span class="badge bg-success">Đã duyệt</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">Chưa duyệt</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center text-muted">Không có bản ghi nào!</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

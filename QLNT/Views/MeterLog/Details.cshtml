@@ -1,0 +1,72 @@
+@model QLNT.Models.MeterLog
+
+@{
+    ViewData["Title"] = "Chi tiết ghi chỉ số đồng hồ";
+}
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="col text-end">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="fas fa-edit"></i> Sửa
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Phòng</dt>
+                <dd class="col-sm-9">@Model.Room?.Name</dd>
+
+                <dt class="col-sm-3">Tòa nhà</dt>
+                <dd class="col-sm-9">@Model.Room?.Building?.Name</dd>
+
+                <dt class="col-sm-3">Loại đồng hồ</dt>
+                <dd class="col-sm-9">@Model.MeterType</dd>
+
+                <dt class="col-sm-3">Chỉ số cũ</dt>
+                <dd class="col-sm-9">@Model.OldReading.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Chỉ số mới</dt>
+                <dd class="col-sm-9">@Model.NewReading.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Tiêu thụ</dt>
+                <dd class="col-sm-9">@Model.Consumption.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Tháng</dt>
+                <dd class="col-sm-9">@Model.Month</dd>
+
+                <dt class="col-sm-3">Ngày ghi</dt>
+                <dd class="col-sm-9">@Model.ReadingDate.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Đồng hồ hiện tại</dt>
+                <dd class="col-sm-9">
+                    @if (Model.IsCurrentMeter)
+                    {
+                        <span class="badge bg-success">Hiện tại</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Không phải hiện tại</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3">Ngày tạo</dt>
+                <dd class="col-sm-9">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                @if (Model.UpdatedAt.HasValue)
+                {
+                    <dt class="col-sm-3">Ngày cập nhật</dt>
+                    <dd class="col-sm-9">@Model.UpdatedAt.Value.ToString("dd/MM/yyyy HH:mm")</dd>
+                }
+            </dl>
+        </div>
+    </div>
+</div>

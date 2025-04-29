@@ -11,6 +11,7 @@ namespace QLNT.Models
         public Room()
         {
             Contracts = new HashSet<Contract>();
+            MeterLogs = new HashSet<MeterLog>();
         }
 
         [Key]
@@ -57,17 +58,15 @@ namespace QLNT.Models
         public string? InvoiceTemplate { get; set; }
 
         public virtual ICollection<Contract> Contracts { get; set; }
+        
+        // Navigation property
+        public virtual ICollection<MeterLog> MeterLogs { get; set; }
     }
 
     public enum RoomStatus
     {
-        [Display(Name = "Trống")]
         Available = 1,
-        [Display(Name = "Đã thuê")]
         Rented = 2,
-        [Display(Name = "Đang sửa chữa")]
-        UnderMaintenance = 3,
-        [Display(Name = "Tạm ngưng")]
-        Suspended = 4
+        Maintenance = 3
     }
 } 

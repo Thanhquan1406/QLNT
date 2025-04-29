@@ -273,7 +273,7 @@ namespace QLNT.Controllers
 
         private async Task PopulateDropdowns()
         {
-            var buildings = await _buildingRepository.GetAllAsync();
+            var buildings = await _buildingRepository.GetAllBuildingsAsync();
             var rooms = await _roomRepository.GetAllAsync();
             var customers = await _customerRepository.GetAllAsync();
 
@@ -292,6 +292,17 @@ namespace QLNT.Controllers
         {
             var rooms = await _roomRepository.GetByBuildingIdAsync(buildingId);
             return Json(rooms.Select(r => new { id = r.Id, name = r.Name }));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetRoomRentalPrice(int roomId)
+        {
+            var room = await _roomRepository.GetByIdAsync(roomId);
+            if (room == null)
+            {
+                return NotFound();
+            }
+            return Json(new { rentalPrice = room.RentalFee });
         }
     }
 } 
