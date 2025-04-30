@@ -98,5 +98,12 @@ namespace QLNT.Repository
                 .Select(r => $"{r.Code} - {r.Name}")
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Room>> GetRoomsByBuildingIdAsync(int buildingId)
+        {
+            return await _context.Rooms
+                .Where(r => r.BuildingId == buildingId)
+                .ToListAsync();
+        }
     }
 }

@@ -18,6 +18,9 @@ namespace QLNT.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<BuildingService> BuildingServices { get; set; }
         public DbSet<MeterLog> MeterLogs { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
+        public DbSet<RoomService> RoomServices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -186,6 +189,67 @@ namespace QLNT.Data
                     .HasForeignKey(ml => ml.RoomId)
                     .IsRequired()
                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Cấu hình Invoice
+            modelBuilder.Entity<Invoice>(entity =>
+            {
+                entity.HasKey(e => e.InvoiceId);
+                entity.Property(e => e.Period).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.IssueDate).IsRequired();
+                entity.Property(e => e.DueDate).IsRequired();
+                entity.Property(e => e.Status).IsRequired();
+                entity.Property(e => e.PaymentMethod).HasMaxLength(50);
+                entity.Property(e => e.ReferenceNumber).HasMaxLength(50);
+                entity.Property(e => e.Notes).HasMaxLength(500);
+
+                // Cấu hình quan hệ với Contract
+                entity.HasOne(i => i.Contract)
+                    .WithMany(c => c.Invoices)
+                    .HasForeignKey(i => i.ContractId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired(true);
+            });
+
+            // Cấu hình InvoiceDetail
+            modelBuilder.Entity<InvoiceDetail>(entity =>
+            {
+                entity.HasKey(e => e.InvoiceDetailId);
+                entity.Property(e => e.ItemName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.UnitPrice).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.Quantity).HasPrecision(18, 2);
+                entity.Property(e => e.Unit).HasMaxLength(50);
+                entity.Property(e => e.DepositType).HasMaxLength(50);
+                entity.Property(e => e.Notes).HasMaxLength(500);
+
+                // Cấu hình quan hệ với Invoice
+                entity.HasOne(id => id.Invoice)
+                    .WithMany(i => i.InvoiceDetails)
+                    .HasForeignKey(id => id.InvoiceId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Cấu hình RoomService
+            modelBuilder.Entity<RoomService>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Price).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.Unit).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Description).HasMaxLength(500);
+                entity.Property(e => e.IsActive).HasDefaultValue(true);
+                entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+
+                // Cấu hình quan hệ với Room
+                entity.HasOne(rs => rs.Room)
+                    .WithMany(r => r.RoomServices)
+                    .HasForeignKey(rs => rs.RoomId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                // Cấu hình quan hệ với Service
+                entity.HasOne(rs => rs.Service)
+                    .WithMany(s => s.RoomServices)
+                    .HasForeignKey(rs => rs.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
         }
     }

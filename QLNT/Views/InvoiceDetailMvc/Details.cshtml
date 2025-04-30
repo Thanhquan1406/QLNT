@@ -1,0 +1,70 @@
+@model QLNT.Models.InvoiceDetail
+
+@{
+    ViewData["Title"] = "Chi tiết khoản phí";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h4>Thông tin chi tiết</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">Mã chi tiết:</dt>
+                <dd class="col-sm-8">@Model.InvoiceDetailId</dd>
+
+                <dt class="col-sm-4">Hóa đơn:</dt>
+                <dd class="col-sm-8">@Model.Invoice?.InvoiceId</dd>
+
+                <dt class="col-sm-4">Tên khoản phí:</dt>
+                <dd class="col-sm-8">@Model.ItemName</dd>
+
+                <dt class="col-sm-4">Đơn giá:</dt>
+                <dd class="col-sm-8">@Model.UnitPrice.ToString("N0") đ</dd>
+
+                <dt class="col-sm-4">Số lượng:</dt>
+                <dd class="col-sm-8">@Model.Quantity</dd>
+
+                <dt class="col-sm-4">Đơn vị tính:</dt>
+                <dd class="col-sm-8">@Model.Unit</dd>
+
+                <dt class="col-sm-4">Thành tiền:</dt>
+                <dd class="col-sm-8">@Model.Amount.ToString("N0") đ</dd>
+
+                @if (Model.StartDate.HasValue)
+                {
+                    <dt class="col-sm-4">Ngày bắt đầu:</dt>
+                    <dd class="col-sm-8">@Model.StartDate.Value.ToString("dd/MM/yyyy")</dd>
+                }
+
+                @if (Model.EndDate.HasValue)
+                {
+                    <dt class="col-sm-4">Ngày kết thúc:</dt>
+                    <dd class="col-sm-8">@Model.EndDate.Value.ToString("dd/MM/yyyy")</dd>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.DepositType))
+                {
+                    <dt class="col-sm-4">Loại tiền cọc:</dt>
+                    <dd class="col-sm-8">@Model.DepositType</dd>
+
+                    <dt class="col-sm-4">Có thể hoàn trả:</dt>
+                    <dd class="col-sm-8">@(Model.IsRefundable ? "Có" : "Không")</dd>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Notes))
+                {
+                    <dt class="col-sm-4">Ghi chú:</dt>
+                    <dd class="col-sm-8">@Model.Notes</dd>
+                }
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.InvoiceDetailId" class="btn btn-warning">Sửa</a>
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    </div>
+</div> 

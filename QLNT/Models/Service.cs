@@ -99,6 +99,9 @@ namespace QLNT.Models
         // Quan hệ nhiều-nhiều với Building thông qua BuildingService
         public virtual ICollection<BuildingService> BuildingServices { get; set; } = new List<BuildingService>();
 
+        // Quan hệ nhiều-nhiều với Room thông qua RoomService
+        public virtual ICollection<RoomService> RoomServices { get; set; } = new List<RoomService>();
+
         // Navigation property để truy cập các Building thông qua BuildingService
         [NotMapped]
         public virtual ICollection<Building> Buildings => BuildingServices.Select(bs => bs.Building).ToList();

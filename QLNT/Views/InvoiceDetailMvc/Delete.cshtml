@@ -1,0 +1,45 @@
+@model QLNT.Models.InvoiceDetail
+
+@{
+    ViewData["Title"] = "Xóa chi tiết hóa đơn";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <h3>Bạn có chắc chắn muốn xóa chi tiết này?</h3>
+    <div class="card">
+        <div class="card-body">
+            <h4>Thông tin chi tiết</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">Mã chi tiết:</dt>
+                <dd class="col-sm-8">@Model.InvoiceDetailId</dd>
+
+                <dt class="col-sm-4">Hóa đơn:</dt>
+                <dd class="col-sm-8">@Model.Invoice?.InvoiceId</dd>
+
+                <dt class="col-sm-4">Tên khoản phí:</dt>
+                <dd class="col-sm-8">@Model.ItemName</dd>
+
+                <dt class="col-sm-4">Đơn giá:</dt>
+                <dd class="col-sm-8">@Model.UnitPrice.ToString("N0") đ</dd>
+
+                <dt class="col-sm-4">Số lượng:</dt>
+                <dd class="col-sm-8">@Model.Quantity</dd>
+
+                <dt class="col-sm-4">Đơn vị tính:</dt>
+                <dd class="col-sm-8">@Model.Unit</dd>
+
+                <dt class="col-sm-4">Thành tiền:</dt>
+                <dd class="col-sm-8">@Model.Amount.ToString("N0") đ</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="InvoiceDetailId" />
+                <input type="submit" value="Xóa" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </form>
+        </div>
+    </div>
+</div> 

@@ -14,5 +14,6 @@ namespace QLNT.Repository
         Task<bool> ExistsAsync(int id);
         Task<IEnumerable<Room>> GetByBuildingIdAsync(int buildingId);
         Task<IEnumerable<string>> GetRoomsByBuildingCodeAsync(string buildingCode);
+        Task<IEnumerable<Room>> GetRoomsByBuildingIdAsync(int buildingId);
     }
 }

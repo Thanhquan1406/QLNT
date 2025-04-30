@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using QLNT.Data;
 using QLNT.Models;
+using Microsoft.Extensions.Logging;
 
 namespace QLNT.Repository
 {
     public class ContractRepository : IContractRepository
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<ContractRepository> _logger;
 
-        public ContractRepository(ApplicationDbContext context)
+        public ContractRepository(ApplicationDbContext context, ILogger<ContractRepository> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // Implement các phương thức CRUD cơ bản
@@ -28,10 +31,38 @@ namespace QLNT.Repository
 
         public async Task<Contract> GetByIdAsync(int id)
         {
-            return await _context.Contracts
-                .Include(c => c.Room)
-                .Include(c => c.Customer)
-                .FirstOrDefaultAsync(c => c.Id == id);
+            _logger.LogInformation($"Đang tìm hợp đồng với ID: {id}");
+            try
+            {
+                var contract = await _context.Contracts
+                    .Include(c => c.Customer)
+                    .Include(c => c.Room)
+                    .FirstOrDefaultAsync(c => c.Id == id);
+
+                if (contract == null)
+                {
+                    _logger.LogWarning($"Không tìm thấy hợp đồng với ID: {id}");
+                }
+                else
+                {
+                    _logger.LogInformation($"Đã tìm thấy hợp đồng: ID={contract.Id}, Số hợp đồng={contract.ContractNumber}");
+                    if (contract.Customer == null)
+                    {
+                        _logger.LogWarning($"Hợp đồng {contract.Id} không có thông tin khách hàng");
+                    }
+                    else
+                    {
+                        _logger.LogInformation($"Thông tin khách hàng: ID={contract.Customer.Id}, Tên={contract.Customer.FullName }");
+                    }
+                }
+
+                return contract;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Lỗi khi tìm hợp đồng với ID: {id}");
+                throw;
+            }
         }
 
         public async Task<Contract> AddAsync(Contract contract)
@@ -243,6 +274,13 @@ namespace QLNT.Repository
             return await _context.Contracts
                 .Where(c => c.Status == ContractStatus.Active)
                 .SumAsync(c => c.Deposit);
+        }
+
+        public async Task<IEnumerable<Contract>> GetContractsByRoomIdAsync(int roomId)
+        {
+            return await _context.Contracts
+                .Where(c => c.RoomId == roomId)
+                .ToListAsync();
         }
     }
 } 

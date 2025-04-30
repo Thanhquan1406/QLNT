@@ -335,6 +335,119 @@ namespace QLNT.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("QLNT.Models.Invoice", b =>
+                {
+                    b.Property<int>("InvoiceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceId"));
+
+                    b.Property<int>("ContractId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InvoiceNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<int>("InvoiceType")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("IssueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("PaidDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Period")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("ReferenceNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("InvoiceId");
+
+                    b.HasIndex("ContractId");
+
+                    b.ToTable("Invoices");
+                });
+
+            modelBuilder.Entity("QLNT.Models.InvoiceDetail", b =>
+                {
+                    b.Property<int>("InvoiceDetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceDetailId"));
+
+                    b.Property<string>("DepositType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("InvoiceId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRefundable")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ItemName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("InvoiceDetailId");
+
+                    b.HasIndex("InvoiceId");
+
+                    b.ToTable("InvoiceDetails");
+                });
+
             modelBuilder.Entity("QLNT.Models.MeterLog", b =>
                 {
                     b.Property<int>("Id")
@@ -451,6 +564,61 @@ namespace QLNT.Migrations
                     b.ToTable("Rooms");
                 });
 
+            modelBuilder.Entity("QLNT.Models.RoomService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ContractId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContractId");
+
+                    b.HasIndex("RoomId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("RoomServices");
+                });
+
             modelBuilder.Entity("QLNT.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -531,6 +699,28 @@ namespace QLNT.Migrations
                     b.Navigation("Room");
                 });
 
+            modelBuilder.Entity("QLNT.Models.Invoice", b =>
+                {
+                    b.HasOne("QLNT.Models.Contract", "Contract")
+                        .WithMany("Invoices")
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Contract");
+                });
+
+            modelBuilder.Entity("QLNT.Models.InvoiceDetail", b =>
+                {
+                    b.HasOne("QLNT.Models.Invoice", "Invoice")
+                        .WithMany("InvoiceDetails")
+                        .HasForeignKey("InvoiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Invoice");
+                });
+
             modelBuilder.Entity("QLNT.Models.MeterLog", b =>
                 {
                     b.HasOne("QLNT.Models.Room", "Room")
@@ -553,6 +743,29 @@ namespace QLNT.Migrations
                     b.Navigation("Building");
                 });
 
+            modelBuilder.Entity("QLNT.Models.RoomService", b =>
+                {
+                    b.HasOne("QLNT.Models.Contract", null)
+                        .WithMany("RoomServices")
+                        .HasForeignKey("ContractId");
+
+                    b.HasOne("QLNT.Models.Room", "Room")
+                        .WithMany("RoomServices")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QLNT.Models.Service", "Service")
+                        .WithMany("RoomServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+
+                    b.Navigation("Service");
+                });
+
             modelBuilder.Entity("QLNT.Models.Building", b =>
                 {
                     b.Navigation("BuildingServices");
@@ -560,9 +773,21 @@ namespace QLNT.Migrations
                     b.Navigation("Rooms");
                 });
 
+            modelBuilder.Entity("QLNT.Models.Contract", b =>
+                {
+                    b.Navigation("Invoices");
+
+                    b.Navigation("RoomServices");
+                });
+
             modelBuilder.Entity("QLNT.Models.Customer", b =>
                 {
                     b.Navigation("Contracts");
+                });
+
+            modelBuilder.Entity("QLNT.Models.Invoice", b =>
+                {
+                    b.Navigation("InvoiceDetails");
                 });
 
             modelBuilder.Entity("QLNT.Models.Room", b =>
@@ -570,11 +795,15 @@ namespace QLNT.Migrations
                     b.Navigation("Contracts");
 
                     b.Navigation("MeterLogs");
+
+                    b.Navigation("RoomServices");
                 });
 
             modelBuilder.Entity("QLNT.Models.Service", b =>
                 {
                     b.Navigation("BuildingServices");
+
+                    b.Navigation("RoomServices");
                 });
 #pragma warning restore 612, 618
         }

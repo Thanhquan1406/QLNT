@@ -12,6 +12,7 @@ namespace QLNT.Models
         {
             Contracts = new HashSet<Contract>();
             MeterLogs = new HashSet<MeterLog>();
+            RoomServices = new HashSet<RoomService>();
         }
 
         [Key]
@@ -61,6 +62,7 @@ namespace QLNT.Models
         
         // Navigation property
         public virtual ICollection<MeterLog> MeterLogs { get; set; }
+        public virtual ICollection<RoomService> RoomServices { get; set; }
     }
 
     public enum RoomStatus

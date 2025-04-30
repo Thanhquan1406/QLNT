@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\controllers\\invoicemvccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\invoicemvccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\ibuildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\ibuildingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\controllers\\buildingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\controllers\\buildingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\invoicedetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\invoicedetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\meterlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\models\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\models\\viewmodels\\meterlogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|c:\\users\\thanh\\onedrive\\m\u00E1y t\u00EDnh\\doancs\\qlnt\\repository\\meterlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CD4DA58-FE1A-4089-ACB3-3B7566CB2E4D}|QLNT\\QLNT.csproj|solutionrelative:qlnt\\repository\\meterlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,63 +106,145 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "QLNT\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
-              "RelativeToolTip": "QLNT\\Models\\Customer.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAiwE8AAAACAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "RoomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\RoomRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\RoomRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\RoomRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\RoomRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:11:53.296Z",
+              "WhenOpened": "2025-04-29T12:22:36.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBuildingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\IBuildingRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\IBuildingRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\IBuildingRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\IBuildingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:22:26.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BuildingController.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\BuildingController.cs",
+              "RelativeDocumentMoniker": "QLNT\\Controllers\\BuildingController.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\BuildingController.cs",
+              "RelativeToolTip": "QLNT\\Controllers\\BuildingController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAwLgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:45:53.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InvoiceMvcController.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\InvoiceMvcController.cs",
+              "RelativeDocumentMoniker": "QLNT\\Controllers\\InvoiceMvcController.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\InvoiceMvcController.cs",
+              "RelativeToolTip": "QLNT\\Controllers\\InvoiceMvcController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAQwHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:44:46.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
-              "RelativeDocumentMoniker": "QLNT\\Models\\Service.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
-              "RelativeToolTip": "QLNT\\Models\\Service.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAA6wHYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:11:37.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Room.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\Room.cs",
               "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Room.cs",
               "RelativeToolTip": "QLNT\\Models\\Room.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwEcAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwB4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T12:11:23.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContractRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\ContractRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\ContractRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\ContractRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\ContractRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwDYAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:42:02.861Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "IRoomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\IRoomRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\IRoomRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\IRoomRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\IRoomRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:22:41.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Invoice.cs",
+              "RelativeToolTip": "QLNT\\Models\\Invoice.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:38:08.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InvoiceDetailRepository.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\InvoiceDetailRepository.cs",
+              "RelativeDocumentMoniker": "QLNT\\Repository\\InvoiceDetailRepository.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\InvoiceDetailRepository.cs",
+              "RelativeToolTip": "QLNT\\Repository\\InvoiceDetailRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:44:16.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Service.cs",
+              "RelativeToolTip": "QLNT\\Models\\Service.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAiwHkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:11:37.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Contract.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Contract.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\Contract.cs",
               "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Contract.cs",
               "RelativeToolTip": "QLNT\\Models\\Contract.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAA+wF0AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwFgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:11:19.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T12:11:19.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Building.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Building.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\Building.cs",
@@ -138,12 +252,11 @@
               "RelativeToolTip": "QLNT\\Models\\Building.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAqwDYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:10:06.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T12:10:06.999Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "ContractController.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ContractController.cs",
               "RelativeDocumentMoniker": "QLNT\\Controllers\\ContractController.cs",
@@ -155,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "MeterLog.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\MeterLog.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\MeterLog.cs",
@@ -163,12 +276,11 @@
               "RelativeToolTip": "QLNT\\Models\\MeterLog.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAmwC4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:41:01.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T11:41:01.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "QLNT\\Controllers\\ServiceController.cs",
@@ -180,7 +292,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
+              "RelativeDocumentMoniker": "QLNT\\Program.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
+              "RelativeToolTip": "QLNT\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T07:42:46.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "QLNT\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\Customer.cs",
+              "RelativeToolTip": "QLNT\\Models\\Customer.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwE8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:11:53.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Index.cshtml",
               "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Index.cshtml",
@@ -192,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "MeterLogViewModel.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\ViewModels\\MeterLogViewModel.cs",
@@ -204,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "MeterLogCreateViewModel.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
               "RelativeDocumentMoniker": "QLNT\\Models\\ViewModels\\MeterLogCreateViewModel.cs",
@@ -216,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Edit.cshtml",
               "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Edit.cshtml",
@@ -228,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "MeterLogController.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Controllers\\MeterLogController.cs",
               "RelativeDocumentMoniker": "QLNT\\Controllers\\MeterLogController.cs",
@@ -240,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "MeterLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Repository\\MeterLogRepository.cs",
               "RelativeDocumentMoniker": "QLNT\\Repository\\MeterLogRepository.cs",
@@ -252,19 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
-              "RelativeDocumentMoniker": "QLNT\\Program.cs",
-              "ToolTip": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Program.cs",
-              "RelativeToolTip": "QLNT\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T07:42:46.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\thanh\\OneDrive\\M\u00E1y t\u00EDnh\\DOANCS\\QLNT\\Views\\MeterLog\\Delete.cshtml",
               "RelativeDocumentMoniker": "QLNT\\Views\\MeterLog\\Delete.cshtml",
