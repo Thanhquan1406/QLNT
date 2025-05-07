@@ -291,3 +291,8 @@ C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\obj\Debug\net8.0\QLNT.pdb
 C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\obj\Debug\net8.0\QLNT.genruntimeconfig.cache
 C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\obj\Debug\net8.0\ref\QLNT.dll
 C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\thanh\OneDrive\Máy tính\DOANCS\QLNT\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

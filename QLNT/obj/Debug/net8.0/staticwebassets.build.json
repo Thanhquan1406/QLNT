@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hX7Z6ambs6TvJO87LQUENNezIdmizR74ArN7fQ6GE0M=",
+  "Hash": "oCkEtUfiSXEsgpJae3ohzuKgGRM9Tw5kQmnWflnC0yY=",
   "Source": "QLNT",
   "BasePath": "_content/QLNT",
   "Mode": "Default",
@@ -227,6 +227,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png"
     },
     {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/identity_card/33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png"
+    },
+    {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\394cbd23-8ac5-4ef8-975a-37c805baa8df_Nha tro test.png",
       "SourceId": "QLNT",
       "SourceType": "Discovered",
@@ -267,6 +288,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/identity_card/4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png"
     },
     {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png",
@@ -416,6 +458,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png"
     },
     {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/identity_card/88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png"
+    },
+    {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png",
       "SourceId": "QLNT",
       "SourceType": "Discovered",
@@ -435,6 +498,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png"
+    },
+    {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/identity_card/b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\identity_card\\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png"
     },
     {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\b6f8dfbf-b412-4929-a1f4-4570be18de15_Nha tro test.png",
@@ -710,6 +794,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\customers\\portrait\\9c3c94ad-5bd7-42ba-9529-109a0c0b05dd_Nha tro test.png"
     },
     {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/portrait/9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\portrait\\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png"
+    },
+    {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png",
       "SourceId": "QLNT",
       "SourceType": "Discovered",
@@ -750,6 +855,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\customers\\portrait\\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png"
+    },
+    {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/portrait/cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\portrait\\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png"
     },
     {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\cb77d946-3590-4c66-900b-50d8c0d2c818_Nha tro test.png",
@@ -899,6 +1025,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\customers\\representative\\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png"
     },
     {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/representative/89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\representative\\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png"
+    },
+    {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\89cad4d5-06bf-4cfb-9ffd-102ae8f268a7_Nha tro test.png",
       "SourceId": "QLNT",
       "SourceType": "Discovered",
@@ -981,6 +1128,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\customers\\representative\\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png"
+    },
+    {
+      "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png",
+      "SourceId": "QLNT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\",
+      "BasePath": "_content/QLNT",
+      "RelativePath": "Images/customers/representative/d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyo7c2q2jc",
+      "Integrity": "65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\customers\\representative\\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png"
     },
     {
       "Identity": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\e0d6c23b-d6ee-4680-94e4-f77239db2f3a_Nha tro test.png",
@@ -2901,6 +3069,88 @@
       ]
     },
     {
+      "Route": "Images/customers/identity_card/33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/identity_card/33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
       "Route": "Images/customers/identity_card/394cbd23-8ac5-4ef8-975a-37c805baa8df_Nha tro test.dyo7c2q2jc.png",
       "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\394cbd23-8ac5-4ef8-975a-37c805baa8df_Nha tro test.png",
       "Selectors": [],
@@ -3061,6 +3311,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-7S5ODPbXNHkxi8UhImLoTWQq/1Yc7n8SC5nkG9HItvU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/identity_card/4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
         }
       ]
     },
@@ -3639,6 +3971,88 @@
       ]
     },
     {
+      "Route": "Images/customers/identity_card/88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/identity_card/88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
       "Route": "Images/customers/identity_card/a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.dyo7c2q2jc.png",
       "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png",
       "Selectors": [],
@@ -3707,6 +4121,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Thu, 24 Apr 2025 07:05:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/identity_card/b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/identity_card/b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\identity_card\\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4787,6 +5283,88 @@
       ]
     },
     {
+      "Route": "Images/customers/portrait/9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/portrait/9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/portrait/9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
       "Route": "Images/customers/portrait/a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.dyo7c2q2jc.png",
       "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png",
       "Selectors": [],
@@ -4937,6 +5515,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Thu, 24 Apr 2025 07:05:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/portrait/cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/portrait/cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/portrait/cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\portrait\\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5525,6 +6185,88 @@
       ]
     },
     {
+      "Route": "Images/customers/representative/89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/representative/89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/representative/89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 16:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
       "Route": "Images/customers/representative/89cad4d5-06bf-4cfb-9ffd-102ae8f268a7_Nha tro test.dyo7c2q2jc.png",
       "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\89cad4d5-06bf-4cfb-9ffd-102ae8f268a7_Nha tro test.png",
       "Selectors": [],
@@ -5839,6 +6581,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Thu, 24 Apr 2025 07:05:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/representative/d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.dyo7c2q2jc.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyo7c2q2jc"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/customers/representative/d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/customers/representative/d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png",
+      "AssetFile": "C:\\Users\\thanh\\OneDrive\\Máy tính\\DOANCS\\QLNT\\wwwroot\\Images\\customers\\representative\\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202832"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 11:22:16 GMT"
         },
         {
           "Name": "Cache-Control",

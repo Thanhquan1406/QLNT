@@ -4,6 +4,7 @@ using QLNT.Repository;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace QLNT.Controllers
 {
@@ -12,10 +13,12 @@ namespace QLNT.Controllers
     public class InvoiceController : ControllerBase
     {
         private readonly IInvoiceRepository _invoiceRepository;
+        private readonly ILogger<InvoiceController> _logger;
 
-        public InvoiceController(IInvoiceRepository invoiceRepository)
+        public InvoiceController(IInvoiceRepository invoiceRepository, ILogger<InvoiceController> logger)
         {
             _invoiceRepository = invoiceRepository;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -37,8 +40,17 @@ namespace QLNT.Controllers
         [HttpPost]
         public async Task<ActionResult<Invoice>> CreateInvoice(Invoice invoice)
         {
-            var createdInvoice = await _invoiceRepository.AddAsync(invoice);
-            return CreatedAtAction(nameof(GetInvoice), new { id = createdInvoice.InvoiceId }, createdInvoice);
+            try
+            {
+                // Lưu hóa đơn vào database
+                var createdInvoice = await _invoiceRepository.AddAsync(invoice);
+                return CreatedAtAction(nameof(GetInvoice), new { id = createdInvoice.InvoiceId }, createdInvoice);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi tạo hóa đơn");
+                return StatusCode(500, "Có lỗi xảy ra khi tạo hóa đơn");
+            }
         }
 
         [HttpPut("{id}")]
@@ -67,13 +79,6 @@ namespace QLNT.Controllers
             return Ok(invoices);
         }
 
-        [HttpGet("customer/{customerId}")]
-        public async Task<ActionResult<IEnumerable<Invoice>>> GetInvoicesByCustomer(int customerId)
-        {
-            var invoices = await _invoiceRepository.GetByCustomerIdAsync(customerId);
-            return Ok(invoices);
-        }
-
         [HttpGet("status/{status}")]
         public async Task<ActionResult<IEnumerable<Invoice>>> GetInvoicesByStatus(InvoiceStatus status)
         {
@@ -89,18 +94,87 @@ namespace QLNT.Controllers
         }
 
         [HttpPut("{id}/status")]
-        public async Task<IActionResult> UpdateInvoiceStatus(int id, [FromBody] InvoiceStatusUpdateDto statusUpdate)
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateInvoiceStatusRequest request)
         {
-            var result = await _invoiceRepository.UpdateStatusAsync(id, statusUpdate.Status, statusUpdate.PaidDate);
-            if (!result)
-                return NotFound();
-            return NoContent();
+            try
+            {
+                var success = await _invoiceRepository.UpdateStatusAsync(id, request.Status);
+                if (!success)
+                {
+                    return NotFound();
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi cập nhật trạng thái hóa đơn");
+                return StatusCode(500, "Có lỗi xảy ra khi cập nhật trạng thái hóa đơn");
+            }
+        }
+
+        [HttpPut("{id}/approve")]
+        public async Task<IActionResult> ApproveInvoice(int id)
+        {
+            try
+            {
+                var success = await _invoiceRepository.ApproveInvoiceAsync(id);
+                if (!success)
+                {
+                    return NotFound();
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi duyệt hóa đơn");
+                return StatusCode(500, "Có lỗi xảy ra khi duyệt hóa đơn");
+            }
+        }
+
+        [HttpPut("{id}/payment")]
+        public async Task<IActionResult> UpdatePayment(int id, [FromBody] UpdatePaymentRequest request)
+        {
+            try
+            {
+                var success = await _invoiceRepository.UpdatePaymentAsync(id, request.PaidAmount);
+                if (!success)
+                {
+                    return NotFound();
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi cập nhật thanh toán hóa đơn");
+                return StatusCode(500, "Có lỗi xảy ra khi cập nhật thanh toán hóa đơn");
+            }
+        }
+
+        [HttpGet("contract/{contractId}/debt")]
+        public async Task<ActionResult<decimal>> GetContractTotalDebt(int contractId)
+        {
+            var totalDebt = await _invoiceRepository.GetTotalDebtByContractIdAsync(contractId);
+            return Ok(totalDebt);
+        }
+
+        [HttpGet("approved")]
+        public async Task<ActionResult<IEnumerable<Invoice>>> GetApprovedInvoices([FromQuery] bool isApproved = true)
+        {
+            var invoices = await _invoiceRepository.GetApprovedInvoicesAsync(isApproved);
+            return Ok(invoices);
         }
     }
 
-    public class InvoiceStatusUpdateDto
+    public class UpdateInvoiceStatusRequest
     {
         public InvoiceStatus Status { get; set; }
-        public DateTime? PaidDate { get; set; }
+    }
+
+    public class UpdatePaymentRequest
+    {
+        public decimal PaidAmount { get; set; }
     }
 } 

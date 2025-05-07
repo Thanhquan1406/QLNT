@@ -87,9 +87,24 @@ namespace QLNT.Repository
 
         public async Task<IEnumerable<InvoiceDetail>> GetByServiceIdAsync(int serviceId)
         {
+            // Lấy danh sách hợp đồng có dịch vụ này thông qua Building
+            var contractIds = await _context.Contracts
+                .Where(c => _context.BuildingServices
+                    .Any(bs => bs.ServiceId == serviceId && 
+                         bs.BuildingId == c.Room.BuildingId))
+                .Select(c => c.Id)
+                .ToListAsync();
+
+            // Lấy danh sách hóa đơn theo contractIds
+            var invoiceIds = await _context.Invoices
+                .Where(i => contractIds.Contains(i.ContractId))
+                .Select(i => i.InvoiceId)
+                .ToListAsync();
+
+            // Lấy chi tiết hóa đơn theo invoiceIds
             return await _context.InvoiceDetails
                 .Include(detail => detail.Invoice)
-                .Where(detail => detail.Invoice.Contract.Room.RoomServices.Any(rs => rs.ServiceId == serviceId))
+                .Where(detail => invoiceIds.Contains(detail.InvoiceId))
                 .ToListAsync();
         }
 
@@ -98,6 +113,14 @@ namespace QLNT.Repository
             return await _context.InvoiceDetails
                 .Include(detail => detail.Invoice)
                 .Where(detail => detail.Invoice.IssueDate >= startDate && detail.Invoice.IssueDate <= endDate)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<InvoiceDetail>> GetByContractIdAsync(int contractId)
+        {
+            return await _context.InvoiceDetails
+                .Include(d => d.Invoice)
+                .Where(d => d.Invoice.ContractId == contractId)
                 .ToListAsync();
         }
     }

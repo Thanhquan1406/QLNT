@@ -12,8 +12,8 @@ using QLNT.Data;
 namespace QLNT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250429103640_AddInvoiceAndInvoiceDetail")]
-    partial class AddInvoiceAndInvoiceDetail
+    [Migration("20250430142425_FixInvoiceContractRelationship")]
+    partial class FixInvoiceContractRelationship
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -349,8 +349,20 @@ namespace QLNT.Migrations
                     b.Property<int>("ContractId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ContractId1")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Discount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("InvoiceNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("InvoiceType")
                         .HasColumnType("int");
@@ -363,30 +375,31 @@ namespace QLNT.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<DateTime?>("PaidDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PaymentMethod")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<string>("Period")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("ReferenceNumber")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<decimal>("Subtotal")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Tax")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("InvoiceId");
 
                     b.HasIndex("ContractId");
+
+                    b.HasIndex("ContractId1");
 
                     b.ToTable("Invoices");
                 });
@@ -424,7 +437,11 @@ namespace QLNT.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
@@ -441,6 +458,8 @@ namespace QLNT.Migrations
                     b.HasKey("InvoiceDetailId");
 
                     b.HasIndex("InvoiceId");
+
+                    b.HasIndex("ServiceId");
 
                     b.ToTable("InvoiceDetails");
                 });
@@ -698,10 +717,16 @@ namespace QLNT.Migrations
 
             modelBuilder.Entity("QLNT.Models.Invoice", b =>
                 {
-                    b.HasOne("QLNT.Models.Contract", "Contract")
-                        .WithMany("Invoices")
+                    b.HasOne("QLNT.Models.Contract", null)
+                        .WithMany()
                         .HasForeignKey("ContractId")
                         .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("QLNT.Models.Contract", "Contract")
+                        .WithMany("Invoices")
+                        .HasForeignKey("ContractId1")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Contract");
@@ -715,7 +740,15 @@ namespace QLNT.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("QLNT.Models.Service", "Service")
+                        .WithMany()
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Invoice");
+
+                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("QLNT.Models.MeterLog", b =>

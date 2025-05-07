@@ -1,11 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using QLNT.Models;
 using QLNT.Repository;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
+using QLNT.Data;
+using System.Text.Json.Serialization;
 
 namespace QLNT.Controllers
 {
@@ -15,20 +20,29 @@ namespace QLNT.Controllers
         private readonly IContractRepository _contractRepository;
         private readonly IBuildingRepository _buildingRepository;
         private readonly IRoomRepository _roomRepository;
+        private readonly IServiceRepository _serviceRepository;
+        private readonly IMeterLogRepository _meterLogRepository;
         private readonly ILogger<InvoiceMvcController> _logger;
+        private readonly ApplicationDbContext _context;
 
         public InvoiceMvcController(
             IInvoiceRepository invoiceRepository, 
             IContractRepository contractRepository,
             IBuildingRepository buildingRepository,
             IRoomRepository roomRepository,
-            ILogger<InvoiceMvcController> logger)
+            IServiceRepository serviceRepository,
+            IMeterLogRepository meterLogRepository,
+            ILogger<InvoiceMvcController> logger,
+            ApplicationDbContext context)
         {
             _invoiceRepository = invoiceRepository;
             _contractRepository = contractRepository;
             _buildingRepository = buildingRepository;
             _roomRepository = roomRepository;
+            _serviceRepository = serviceRepository;
+            _meterLogRepository = meterLogRepository;
             _logger = logger;
+            _context = context;
         }
 
         // GET: InvoiceMvc
@@ -52,265 +66,228 @@ namespace QLNT.Controllers
         // GET: InvoiceMvc/Create
         public async Task<IActionResult> Create()
         {
-            _logger.LogInformation("Bắt đầu tạo hóa đơn mới");
             try
             {
                 var buildings = await _buildingRepository.GetAllBuildingsAsync();
-                var rooms = await _roomRepository.GetAllAsync();
-                var contracts = await _contractRepository.GetAllAsync();
+                var services = await _serviceRepository.GetAllServicesAsync();
+                var lastInvoice = await _invoiceRepository.GetLastInvoiceAsync();
 
-                ViewBag.Buildings = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(buildings, "Id", "Name");
-                ViewBag.Rooms = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(rooms, "Id", "RoomNumber");
-                ViewBag.Contracts = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(contracts, "ContractId", "ContractNumber");
+                ViewBag.Buildings = buildings;
+                ViewBag.Services = services;
+                ViewBag.LastInvoice = lastInvoice;
                 
-                _logger.LogInformation("Đã tải dữ liệu cho form tạo hóa đơn");
                 return View();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Lỗi khi tải dữ liệu cho form tạo hóa đơn");
-                throw;
+                ViewBag.Services = new List<Service>();
+                return View();
             }
         }
 
         // POST: InvoiceMvc/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Invoice invoice)
+        public async Task<IActionResult> Create(Invoice invoice, string contractData, string invoiceDetails)
         {
-            _logger.LogInformation("Bắt đầu tạo hóa đơn mới");
-            _logger.LogInformation("Dữ liệu hóa đơn nhận được từ form:");
-            _logger.LogInformation("- ContractId: {ContractId}", invoice.ContractId);
-            _logger.LogInformation("- InvoiceType: {InvoiceType}", invoice.InvoiceType);
-            _logger.LogInformation("- Period: {Period}", invoice.Period);
-            _logger.LogInformation("- IssueDate: {IssueDate}", invoice.IssueDate);
-            _logger.LogInformation("- DueDate: {DueDate}", invoice.DueDate);
-            _logger.LogInformation("- Status: {Status}", invoice.Status);
-            _logger.LogInformation("- PaymentMethod: {PaymentMethod}", invoice.PaymentMethod);
-            _logger.LogInformation("- ReferenceNumber: {ReferenceNumber}", invoice.ReferenceNumber);
-            _logger.LogInformation("- Notes: {Notes}", invoice.Notes);
+            _logger.LogInformation($"Bắt đầu tạo hóa đơn mới");
+            _logger.LogInformation($"ContractId: {invoice.ContractId}");
+            _logger.LogInformation($"ContractData: {contractData}");
+            _logger.LogInformation($"InvoiceDetails: {invoiceDetails}");
 
-            // Kiểm tra hợp đồng tồn tại trước khi validate
-            _logger.LogInformation("Đang tìm hợp đồng với ID: {ContractId}", invoice.ContractId);
-            var contract = await _contractRepository.GetByIdAsync(invoice.ContractId);
-            
-            if (contract == null)
+            try
             {
-                _logger.LogWarning("Không tìm thấy hợp đồng với ID: {ContractId}", invoice.ContractId);
-                ModelState.AddModelError("", "Hợp đồng không tồn tại");
-                return View(invoice);
-            }
-
-            _logger.LogInformation("Thông tin hợp đồng tìm được:");
-            _logger.LogInformation("- ContractId: {ContractId}", contract.Id);
-            _logger.LogInformation("- ContractNumber: {ContractNumber}", contract.ContractNumber);
-            _logger.LogInformation("- CustomerId: {CustomerId}", contract.CustomerId);
-            _logger.LogInformation("- Customer: {CustomerName}", contract.Customer?.FullName);
-
-            // Gán thông tin hợp đồng trước khi validate
-            invoice.Contract = contract;
-            invoice.ContractId = contract.Id;
-
-            // Tạo mã hóa đơn tự động
-            var lastInvoice = await _invoiceRepository.GetLastInvoiceAsync();
-            var invoiceNumber = 1;
-            if (lastInvoice != null && !string.IsNullOrEmpty(lastInvoice.InvoiceNumber))
-            {
-                var lastNumber = int.Parse(lastInvoice.InvoiceNumber.Substring(2));
-                invoiceNumber = lastNumber + 1;
-            }
-            invoice.InvoiceNumber = $"HD{invoiceNumber:D4}";
-
-            _logger.LogInformation("Mã hóa đơn được tạo: {InvoiceNumber}", invoice.InvoiceNumber);
-
-            // Đảm bảo Contract được load đầy đủ
-            _logger.LogInformation("Kiểm tra thông tin Contract sau khi gán:");
-            _logger.LogInformation("- Contract: {Contract}", invoice.Contract?.Id);
-            _logger.LogInformation("- ContractId: {ContractId}", invoice.ContractId);
-            _logger.LogInformation("- Contract.Customer: {Customer}", invoice.Contract?.Customer?.Id);
-            _logger.LogInformation("- InvoiceNumber: {InvoiceNumber}", invoice.InvoiceNumber);
-
-            // Clear ModelState để tránh validation lỗi
-            ModelState.Clear();
-            TryValidateModel(invoice);
-
-            _logger.LogInformation("Thông tin hóa đơn sau khi gán hợp đồng:");
-            _logger.LogInformation("- InvoiceId: {InvoiceId}", invoice.InvoiceId);
-            _logger.LogInformation("- ContractId: {ContractId}", invoice.ContractId);
-            _logger.LogInformation("- Contract: {Contract}", invoice.Contract?.Id);
-            _logger.LogInformation("- Customer: {Customer}", invoice.Customer?.Id);
-
-            if (ModelState.IsValid)
-            {
-                try
+                // Parse InvoiceDetails từ JSON string
+                if (!string.IsNullOrEmpty(invoiceDetails))
                 {
-                    // Thêm hóa đơn vào database
-                    var savedInvoice = await _invoiceRepository.AddAsync(invoice);
-                    _logger.LogInformation("Đã thêm hóa đơn thành công với ID: {InvoiceId}", savedInvoice.InvoiceId);
-
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Lỗi khi tạo hóa đơn: {Message}", ex.Message);
-                    ModelState.AddModelError("", "Có lỗi xảy ra khi tạo hóa đơn. Vui lòng thử lại.");
-                }
-            }
-            else
-            {
-                var errors = ModelState.Values.SelectMany(v => v.Errors);
-                foreach (var error in errors)
-                {
-                    _logger.LogWarning("Lỗi validation: {ErrorMessage}", error.ErrorMessage);
-                }
-            }
-
-            // Nếu có lỗi, load lại dữ liệu cho dropdown
-            var buildings = await _buildingRepository.GetAllBuildingsAsync();
-            ViewBag.Buildings = new SelectList(buildings, "Id", "Name");
-
-            // Nếu có ContractId, load dữ liệu cho dropdown phòng và hợp đồng
-            if (invoice.ContractId > 0)
-            {
-                try
-                {
-                    // Lấy thông tin hợp đồng
-                    var existingContract = await _contractRepository.GetByIdAsync(invoice.ContractId);
-                    _logger.LogInformation("Load lại dữ liệu cho dropdown - Hợp đồng: {@Contract}", existingContract);
-                    
-                    if (existingContract != null && existingContract.Room != null)
+                    var details = JsonSerializer.Deserialize<List<InvoiceDetail>>(invoiceDetails, new JsonSerializerOptions
                     {
-                        var rooms = await _roomRepository.GetByBuildingIdAsync(existingContract.Room.BuildingId);
-                        ViewBag.Rooms = new SelectList(rooms, "Id", "Name");
+                        PropertyNameCaseInsensitive = true,
+                        Converters = { new JsonDateTimeConverter() }
+                    });
+                    
+                    if (details != null && details.Any())
+                    {
+                        // Xử lý thông tin MeterLog cho từng chi tiết
+                        foreach (var detail in details)
+                        {
+                            if (detail.MeterLogId.HasValue)
+                            {
+                                var meterLog = await _meterLogRepository.GetByIdAsync(detail.MeterLogId.Value);
+                                if (meterLog != null)
+                                {
+                                    detail.OldReading = (decimal?)meterLog.OldReading;
+                                    detail.NewReading = (decimal?)meterLog.NewReading;
+                                    detail.MeterName = meterLog.MeterName;
+                                    detail.Month = meterLog.Month;
+                                }
+                            }
 
-                        var contracts = await _contractRepository.GetContractsByRoomIdAsync(existingContract.RoomId);
-                        ViewBag.Contracts = new SelectList(contracts, "Id", "ContractNumber");
+                            // Log thông tin ngày tháng
+                            _logger.LogInformation($"Chi tiết hóa đơn - StartDate: {detail.StartDate}, EndDate: {detail.EndDate}");
+                        }
+                        invoice.InvoiceDetails = details;
+                        _logger.LogInformation($"Đã parse được {details.Count} chi tiết hóa đơn");
                     }
                 }
-                catch (Exception ex)
+
+                if (ModelState.IsValid)
                 {
-                    _logger.LogError(ex, "Lỗi khi load dữ liệu cho dropdown: {Message}", ex.Message);
+                    // Lấy thông tin hợp đồng từ ContractId
+                    var contract = await _contractRepository.GetByIdAsync(invoice.ContractId);
+                    
+                    if (contract == null)
+                    {
+                        _logger.LogWarning($"Không tìm thấy hợp đồng với ID: {invoice.ContractId}");
+                        return Json(new { success = false, message = "Không tìm thấy hợp đồng" });
+                    }
+
+                    // Cập nhật thông tin từ hợp đồng
+                    invoice.UpdateFromContract(contract);
+
+                    // Tính toán tổng tiền
+                    if (invoice.InvoiceDetails != null && invoice.InvoiceDetails.Any())
+                    {
+                        _logger.LogInformation($"Số lượng chi tiết hóa đơn: {invoice.InvoiceDetails.Count}");
+                        foreach (var detail in invoice.InvoiceDetails)
+                        {
+                            _logger.LogInformation($"Chi tiết: ServiceId={detail.ServiceId}, Quantity={detail.Quantity}, Amount={detail.Amount}");
+                        }
+                        invoice.ServiceAmount = invoice.InvoiceDetails.Sum(d => d.Amount);
+                        invoice.TotalAmount = (invoice.RentAmount ?? 0) + (invoice.ServiceAmount ?? 0) - invoice.Discount;
+                    }
+                    else
+                    {
+                        _logger.LogWarning("Không có chi tiết hóa đơn nào");
+                        return Json(new { success = false, message = "Vui lòng thêm ít nhất một dịch vụ" });
+                    }
+
+                    // Lưu hóa đơn
+                    await _invoiceRepository.AddAsync(invoice);
+                    _logger.LogInformation($"Tạo hóa đơn thành công. ID: {invoice.InvoiceId}");
+                    return Json(new { success = true, redirectUrl = Url.Action("Index") });
+                }
+                else
+                {
+                    _logger.LogWarning("Dữ liệu không hợp lệ");
+                    var errors = ModelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage)
+                        .ToList();
+                    return Json(new { success = false, message = "Dữ liệu không hợp lệ", errors = errors });
                 }
             }
-
-            return View(invoice);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi tạo hóa đơn");
+                return Json(new { success = false, message = $"Có lỗi xảy ra: {ex.Message}" });
+            }
         }
 
         // GET: InvoiceMvc/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            var invoice = await _invoiceRepository.GetByIdAsync(id);
-            if (invoice == null)
+            try
             {
-                return NotFound();
-            }
-
-            // Load thông tin hợp đồng và phòng
-            var contract = await _contractRepository.GetByIdAsync(invoice.ContractId);
-            if (contract != null)
-            {
-                invoice.Contract = contract;
-                if (contract.Room != null)
+                var invoice = await _invoiceRepository.GetByIdAsync(id);
+                if (invoice == null)
                 {
-                    ViewBag.BuildingId = contract.Room.BuildingId;
-                    ViewBag.RoomId = contract.RoomId;
+                    return NotFound();
                 }
-            }
 
-            return View(invoice);
+                // Lấy danh sách tòa nhà và dịch vụ
+                var buildings = await _buildingRepository.GetAllBuildingsAsync();
+                var services = await _serviceRepository.GetAllServicesAsync();
+
+                ViewBag.Buildings = buildings;
+                ViewBag.Services = services;
+
+                return View(invoice);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Lỗi khi tải dữ liệu cho form chỉnh sửa hóa đơn");
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         // POST: InvoiceMvc/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Invoice invoice)
+        public async Task<IActionResult> Edit(int id, Invoice invoice, string contractData, string invoiceDetails)
         {
-            _logger.LogInformation("Bắt đầu cập nhật hóa đơn {InvoiceId}", id);
+            _logger.LogInformation($"Bắt đầu cập nhật hóa đơn {id}");
             
             if (id != invoice.InvoiceId)
             {
-                _logger.LogWarning("ID hóa đơn không khớp: {RequestId} != {InvoiceId}", id, invoice.InvoiceId);
-                return NotFound();
-            }
-
-            // Kiểm tra hợp đồng tồn tại
-            _logger.LogInformation("Đang tìm hợp đồng với ID: {ContractId}", invoice.ContractId);
-            var contract = await _contractRepository.GetByIdAsync(invoice.ContractId);
-            
-            if (contract == null)
-            {
-                _logger.LogWarning("Không tìm thấy hợp đồng với ID: {ContractId}", invoice.ContractId);
-                ModelState.AddModelError("", "Hợp đồng không tồn tại");
-                return View(invoice);
-            }
-
-            _logger.LogInformation("Thông tin hợp đồng tìm được:");
-            _logger.LogInformation("- ContractId: {ContractId}", contract.Id);
-            _logger.LogInformation("- ContractNumber: {ContractNumber}", contract.ContractNumber);
-            _logger.LogInformation("- CustomerId: {CustomerId}", contract.CustomerId);
-            _logger.LogInformation("- Customer: {CustomerName}", contract.Customer?.FullName);
-
-            // Lấy thông tin hóa đơn hiện tại
-            var existingInvoice = await _invoiceRepository.GetByIdAsync(id);
-            if (existingInvoice == null)
-            {
-                _logger.LogWarning("Không tìm thấy hóa đơn với ID: {InvoiceId}", id);
                 return NotFound();
             }
 
             try
             {
-                // Cập nhật các trường được phép sửa
-                existingInvoice.DueDate = invoice.DueDate;
-                existingInvoice.Status = invoice.Status;
-                existingInvoice.PaidDate = invoice.PaidDate;
-                existingInvoice.PaymentMethod = invoice.PaymentMethod;
-                existingInvoice.ReferenceNumber = invoice.ReferenceNumber;
-                existingInvoice.Notes = invoice.Notes;
-
-                // Clear ModelState để tránh validation lỗi
-                ModelState.Clear();
-
-                // Chỉ validate các trường cần thiết
-                if (string.IsNullOrEmpty(existingInvoice.InvoiceNumber))
-                    ModelState.AddModelError("InvoiceNumber", "Mã hóa đơn là bắt buộc");
-                if (existingInvoice.ContractId <= 0)
-                    ModelState.AddModelError("ContractId", "Hợp đồng là bắt buộc");
-                if (existingInvoice.DueDate == default)
-                    ModelState.AddModelError("DueDate", "Hạn thanh toán là bắt buộc");
-                if (string.IsNullOrEmpty(existingInvoice.Status.ToString()))
-                    ModelState.AddModelError("Status", "Trạng thái là bắt buộc");
+                // Parse InvoiceDetails từ JSON string
+                if (!string.IsNullOrEmpty(invoiceDetails))
+                {
+                    var details = JsonSerializer.Deserialize<List<InvoiceDetail>>(invoiceDetails);
+                    if (details != null && details.Any())
+                    {
+                        invoice.InvoiceDetails = details;
+                        _logger.LogInformation($"Đã parse được {details.Count} chi tiết hóa đơn");
+                    }
+                }
 
                 if (ModelState.IsValid)
                 {
+                    // Lấy thông tin hợp đồng từ ContractId
+                    var contract = await _contractRepository.GetByIdAsync(invoice.ContractId);
+                    
+                    if (contract == null)
+                    {
+                        _logger.LogWarning($"Không tìm thấy hợp đồng với ID: {invoice.ContractId}");
+                        return Json(new { success = false, message = "Không tìm thấy hợp đồng" });
+                    }
+
+                    // Cập nhật thông tin từ hợp đồng
+                    invoice.UpdateFromContract(contract);
+
+                    // Tính toán tổng tiền
+                    if (invoice.InvoiceDetails != null && invoice.InvoiceDetails.Any())
+                    {
+                        _logger.LogInformation($"Số lượng chi tiết hóa đơn: {invoice.InvoiceDetails.Count}");
+                        foreach (var detail in invoice.InvoiceDetails)
+                        {
+                            _logger.LogInformation($"Chi tiết: ServiceId={detail.ServiceId}, Quantity={detail.Quantity}, Amount={detail.Amount}");
+                        }
+                        invoice.ServiceAmount = invoice.InvoiceDetails.Sum(d => d.Amount);
+                        invoice.TotalAmount = (invoice.RentAmount ?? 0) + (invoice.ServiceAmount ?? 0) - invoice.Discount;
+                    }
+                    else
+                    {
+                        _logger.LogWarning("Không có chi tiết hóa đơn nào");
+                        return Json(new { success = false, message = "Vui lòng thêm ít nhất một dịch vụ" });
+                    }
+
                     // Cập nhật hóa đơn
-                    await _invoiceRepository.UpdateAsync(existingInvoice);
-                    _logger.LogInformation("Đã cập nhật hóa đơn thành công");
-                    return RedirectToAction(nameof(Index));
+                    await _invoiceRepository.UpdateAsync(invoice);
+                    _logger.LogInformation($"Cập nhật hóa đơn thành công. ID: {invoice.InvoiceId}");
+                    return Json(new { success = true, redirectUrl = Url.Action("Index") });
                 }
                 else
                 {
-                    var errors = ModelState.Values.SelectMany(v => v.Errors);
-                    foreach (var error in errors)
-                    {
-                        _logger.LogWarning("Lỗi validation: {ErrorMessage}", error.ErrorMessage);
-                    }
+                    _logger.LogWarning("Dữ liệu không hợp lệ");
+                    var errors = ModelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage)
+                        .ToList();
+                    return Json(new { success = false, message = "Dữ liệu không hợp lệ", errors = errors });
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Lỗi khi cập nhật hóa đơn: {Message}", ex.Message);
-                ModelState.AddModelError("", "Có lỗi xảy ra khi cập nhật hóa đơn. Vui lòng thử lại.");
+                _logger.LogError(ex, "Lỗi khi cập nhật hóa đơn");
+                return Json(new { success = false, message = $"Có lỗi xảy ra: {ex.Message}" });
             }
-
-            // Nếu có lỗi, load lại dữ liệu cho view
-            if (contract.Room != null)
-            {
-                ViewBag.BuildingId = contract.Room.BuildingId;
-                ViewBag.RoomId = contract.RoomId;
-            }
-
-            return View(existingInvoice);
         }
 
         // GET: InvoiceMvc/Delete/5
@@ -333,36 +310,185 @@ namespace QLNT.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // API endpoint để lấy phòng theo tòa nhà
-        [HttpGet]
-        public async Task<IActionResult> GetRoomsByBuilding(int id)
+        // GET: InvoiceMvc/GetRoomsByBuilding/5
+        public async Task<IActionResult> GetRoomsByBuilding(int buildingId)
         {
-            var rooms = await _roomRepository.GetRoomsByBuildingIdAsync(id);
-            return Json(rooms.Select(r => new { id = r.Id, name = r.Name }));
-        }
-
-        // API endpoint để lấy hợp đồng theo phòng
-        [HttpGet]
-        public async Task<IActionResult> GetContractsByRoom(int id)
-        {
-            var contracts = await _contractRepository.GetContractsByRoomIdAsync(id);
-            return Json(contracts.Select(c => new { id = c.Id, contractNumber = c.ContractNumber }));
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetContractInfo(int id)
-        {
-            var contract = await _contractRepository.GetByIdAsync(id);
-            if (contract == null)
+            try
             {
+                _logger.LogInformation($"Bắt đầu lấy danh sách phòng cho tòa nhà {buildingId}");
+
+                if (buildingId <= 0)
+                {
+                    return Json(new List<object>());
+                }
+
+                var rooms = await _roomRepository.GetByBuildingIdAsync(buildingId);
+                var roomList = rooms.Select(r => new
+                {
+                    id = r.Id,
+                    name = $"{r.Code} - {r.Name}"
+                }).ToList();
+
+                return Json(roomList);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Lỗi khi lấy danh sách phòng cho tòa nhà {buildingId}");
+                return Json(new List<object>());
+            }
+        }
+
+        // GET: InvoiceMvc/GetContractsByRoom/5
+        public async Task<IActionResult> GetContractsByRoom(int roomId)
+        {
+            try
+            {
+                _logger.LogInformation($"=== BẮT ĐẦU LẤY HỢP ĐỒNG CHO PHÒNG {roomId} ===");
+
+                if (roomId <= 0)
+                {
+                    _logger.LogWarning($"RoomId không hợp lệ: {roomId}");
+                    return Json(new List<object>());
+                }
+
+                var contracts = await _contractRepository.GetByRoomIdAsync(roomId);
+                _logger.LogInformation($"Số lượng hợp đồng tìm thấy: {contracts.Count()}");
+                
+                var contractList = contracts.Select(c => {
+                    _logger.LogInformation($"=== THÔNG TIN HỢP ĐỒNG ===");
+                    _logger.LogInformation($"ID: {c.Id} (Kiểu: {c.Id.GetType()})");
+                    _logger.LogInformation($"Số hợp đồng: {c.ContractNumber}");
+                    _logger.LogInformation($"Khách hàng: {c.Customer?.FullName}");
+                    _logger.LogInformation($"Giá trị trả về cho dropdown: {new { id = c.Id, contractNumber = c.ContractNumber, customerName = c.Customer?.FullName }}");
+                    return new
+                    {
+                        id = c.Id,
+                        contractNumber = c.ContractNumber,
+                        customerName = c.Customer?.FullName
+                    };
+                }).ToList();
+
+                _logger.LogInformation($"=== DANH SÁCH TRẢ VỀ CHO CLIENT ===");
+                _logger.LogInformation(JsonSerializer.Serialize(contractList));
+                _logger.LogInformation("=== KẾT THÚC LẤY DANH SÁCH HỢP ĐỒNG ===\n");
+                return Json(contractList);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Lỗi khi lấy danh sách hợp đồng cho phòng {roomId}");
+                return Json(new List<object>());
+            }
+        }
+
+        // GET: InvoiceMvc/GetContractInfo/5
+        [HttpGet]
+        [Route("InvoiceMvc/GetContractInfo/{contractId}")]
+        public async Task<IActionResult> GetContractInfo(int contractId)
+        {
+            _logger.LogInformation($"\n=== BẮT ĐẦU LẤY THÔNG TIN HỢP ĐỒNG ===");
+            _logger.LogInformation($"URL gọi đến: {Request.Path}");
+            _logger.LogInformation($"Tham số contractId nhận được: {contractId} (Kiểu: {contractId.GetType()})");
+            
+            if (contractId <= 0)
+            {
+                _logger.LogWarning($"ContractId không hợp lệ: {contractId}");
                 return NotFound();
             }
 
-            return Json(new 
+            var contract = await _contractRepository.GetByIdAsync(contractId);
+            if (contract == null)
             {
+                _logger.LogWarning($"Không tìm thấy hợp đồng với ID: {contractId}");
+                return NotFound();
+            }
+
+            _logger.LogInformation($"=== THÔNG TIN HỢP ĐỒNG TÌM THẤY ===");
+            _logger.LogInformation($"ID: {contract.Id} (Kiểu: {contract.Id.GetType()})");
+            _logger.LogInformation($"Số hợp đồng: {contract.ContractNumber}");
+            _logger.LogInformation($"Khách hàng: {contract.Customer?.FullName}");
+            _logger.LogInformation($"Giá thuê: {contract.RentalPrice}");
+            _logger.LogInformation($"Kỳ thanh toán: {contract.PaymentCycle}");
+            _logger.LogInformation("=== KẾT THÚC LẤY THÔNG TIN HỢP ĐỒNG ===\n");
+            
+            // Chỉ trả về các thông tin cần thiết
+            var result = new
+            {
+                id = contract.Id,
+                contractNumber = contract.ContractNumber,
+                customerName = contract.Customer?.FullName,
+                rentalPrice = contract.RentalPrice,
                 paymentCycle = contract.PaymentCycle,
-                // Có thể thêm các thông tin khác của hợp đồng nếu cần
-            });
+                startDate = contract.StartDate,
+                endDate = contract.EndDate,
+                status = contract.Status
+            };
+            
+            return Json(result);
+        }
+
+        // GET: InvoiceMvc/GetMeterReadings
+        public async Task<IActionResult> GetMeterReadings(int roomId, string serviceType)
+        {
+            var meterLogs = await _meterLogRepository.GetByRoomIdAsync(roomId);
+            var filteredLogs = meterLogs.Where(m => m.MeterType == serviceType)
+                                      .OrderByDescending(m => m.ReadingDate)
+                                      .Select(m => new {
+                                          id = m.Id,
+                                          oldReading = m.OldReading,
+                                          newReading = m.NewReading,
+                                          consumption = m.Consumption,
+                                          readingDate = m.ReadingDate.ToString("yyyy-MM-dd"),
+                                          displayText = $"{m.MeterName} - {m.Month}: {m.OldReading} -> {m.NewReading} ({m.Consumption})"
+                                      })
+                                      .ToList();
+            return Json(filteredLogs);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Approve(int id)
+        {
+            try
+            {
+                var invoice = await _context.Invoices.FindAsync(id);
+                if (invoice == null)
+                {
+                    return Json(new { success = false, message = "Không tìm thấy hóa đơn" });
+                }
+                
+                invoice.IsApproved = true;
+                await _context.SaveChangesAsync();
+                
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+    }
+
+    public class JsonDateTimeConverter : JsonConverter<DateTime?>
+    {
+        public override DateTime? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            if (reader.TokenType == JsonTokenType.Null)
+                return null;
+
+            if (reader.TokenType == JsonTokenType.String)
+            {
+                if (DateTime.TryParse(reader.GetString(), out DateTime date))
+                    return date;
+            }
+
+            return null;
+        }
+
+        public override void Write(Utf8JsonWriter writer, DateTime? value, JsonSerializerOptions options)
+        {
+            if (value.HasValue)
+                writer.WriteStringValue(value.Value.ToString("yyyy-MM-dd"));
+            else
+                writer.WriteNullValue();
         }
     }
 } 

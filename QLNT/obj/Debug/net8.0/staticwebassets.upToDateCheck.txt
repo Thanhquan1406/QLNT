@@ -6,8 +6,10 @@ wwwroot\Images\customers\identity_card\0f3b16fa-f371-4960-80f7-12ca06283e77_Nha 
 wwwroot\Images\customers\identity_card\145dde3e-1113-4b9a-987f-699701b24c59_Nha tro test.png
 wwwroot\Images\customers\identity_card\16df5816-c199-4232-8eb9-eb950f91de21_Nha tro test.png
 wwwroot\Images\customers\identity_card\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png
+wwwroot\Images\customers\identity_card\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png
 wwwroot\Images\customers\identity_card\394cbd23-8ac5-4ef8-975a-37c805baa8df_Nha tro test.png
 wwwroot\Images\customers\identity_card\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg
+wwwroot\Images\customers\identity_card\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png
 wwwroot\Images\customers\identity_card\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png
 wwwroot\Images\customers\identity_card\5542f28c-c896-4a3b-9781-1d3cd68ab39a_Nha tro test.png
 wwwroot\Images\customers\identity_card\5d725b68-dd09-488c-b150-6f9ab6e905f1_Nha tro test.png
@@ -15,7 +17,9 @@ wwwroot\Images\customers\identity_card\6c1c52ea-a7b6-418f-9777-d6b0d68f2b48_Nha 
 wwwroot\Images\customers\identity_card\71b6a685-a334-45f3-9b2b-a83a7df8ae97_Nha tro test.png
 wwwroot\Images\customers\identity_card\73f8957d-6d58-4227-bc2d-40874e850b22_Nha tro test.png
 wwwroot\Images\customers\identity_card\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png
+wwwroot\Images\customers\identity_card\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png
 wwwroot\Images\customers\identity_card\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png
+wwwroot\Images\customers\identity_card\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png
 wwwroot\Images\customers\identity_card\b6f8dfbf-b412-4929-a1f4-4570be18de15_Nha tro test.png
 wwwroot\Images\customers\identity_card\bbc706a2-07fb-4e97-9123-bab5c8babde0_Nha tro test.png
 wwwroot\Images\customers\identity_card\bee94d7c-3a40-4560-8c3f-f7f990128b86_Nha tro test.png
@@ -29,8 +33,10 @@ wwwroot\Images\customers\portrait\567a07bd-f39d-4cf6-b1fb-132075cf7316_Nha tro t
 wwwroot\Images\customers\portrait\65196f6a-ff51-473b-9088-d0fbf963f4d5_Nha tro test.png
 wwwroot\Images\customers\portrait\7a6d9720-b0e6-4aa0-b80d-cf8b39c53595_Hình nền chất cool.jpg
 wwwroot\Images\customers\portrait\9c3c94ad-5bd7-42ba-9529-109a0c0b05dd_Nha tro test.png
+wwwroot\Images\customers\portrait\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png
 wwwroot\Images\customers\portrait\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png
 wwwroot\Images\customers\portrait\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png
+wwwroot\Images\customers\portrait\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png
 wwwroot\Images\customers\portrait\cb77d946-3590-4c66-900b-50d8c0d2c818_Nha tro test.png
 wwwroot\Images\customers\portrait\f44fdb98-9729-4486-a78d-0910e518938b_Nha tro test.png
 wwwroot\Images\customers\representative\07780e84-addd-4b50-b865-47926b9205b4_Nha tro test.png
@@ -38,10 +44,12 @@ wwwroot\Images\customers\representative\1150b4e7-7d67-4ceb-9644-1a82faeb844a_Nha
 wwwroot\Images\customers\representative\28dc18b0-6c25-4980-bbd0-47f16e8c1506_Nha tro test.png
 wwwroot\Images\customers\representative\57e67976-19f1-4985-9b73-306badff5a64_Nha tro test.png
 wwwroot\Images\customers\representative\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png
+wwwroot\Images\customers\representative\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png
 wwwroot\Images\customers\representative\89cad4d5-06bf-4cfb-9ffd-102ae8f268a7_Nha tro test.png
 wwwroot\Images\customers\representative\a5d35765-0278-4dba-b6dc-5bb88732c4ed_Hình nền chất cool.jpg
 wwwroot\Images\customers\representative\a65875ef-fc46-4bb8-a061-5121dfa0df02_Nha tro test.png
 wwwroot\Images\customers\representative\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png
+wwwroot\Images\customers\representative\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png
 wwwroot\Images\customers\representative\e0d6c23b-d6ee-4680-94e4-f77239db2f3a_Nha tro test.png
 wwwroot\Images\customers\representative\fe2751dc-ab39-4133-9b91-e65fede8bce7_Nha tro test.png
 wwwroot\js\site.js

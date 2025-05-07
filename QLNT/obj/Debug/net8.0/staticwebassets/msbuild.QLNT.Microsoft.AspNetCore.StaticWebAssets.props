@@ -144,6 +144,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\2abf619a-b991-450e-9fbe-c651a84efe19_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/identity_card/33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\33e1e4e1-4bce-4099-85e0-7182c23782f0_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\394cbd23-8ac5-4ef8-975a-37c805baa8df_Nha tro test.png'))">
       <SourceType>Package</SourceType>
       <SourceId>QLNT</SourceId>
@@ -179,6 +197,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\4292bb8e-f44a-4ebe-8b2f-1974b06f4ddb_Hình nền chất cool.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/identity_card/4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\4708cdc5-39de-4497-bd93-0f1acacaebca_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\4a695c34-1cdb-43a2-9ada-ac0655f0df5f_Nha tro test.png'))">
       <SourceType>Package</SourceType>
@@ -306,6 +342,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\820f3adf-047c-43e9-8787-3579c4a4d098_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/identity_card/88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\88b9c548-3b0a-4146-a434-1633a6f7c505_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png'))">
       <SourceType>Package</SourceType>
       <SourceId>QLNT</SourceId>
@@ -323,6 +377,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\a565f094-3516-4671-ad9e-a1f836dcac3d_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/identity_card/b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\b07c27b6-b701-4ccf-ab6f-709cfd54a35a_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\identity_card\b6f8dfbf-b412-4929-a1f4-4570be18de15_Nha tro test.png'))">
       <SourceType>Package</SourceType>
@@ -558,6 +630,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\9c3c94ad-5bd7-42ba-9529-109a0c0b05dd_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/portrait/9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\9f835ec4-6c83-4e85-9ce7-86f30b9c2a18_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\a58b1c6f-713a-4647-8088-dde7984f5f7b_Nha tro test.png'))">
       <SourceType>Package</SourceType>
       <SourceId>QLNT</SourceId>
@@ -593,6 +683,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\c3ad74f6-8ae6-46ab-9305-9ffea46e8d94_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/portrait/cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\cac2c4c2-ffdf-47b5-8ce4-5aa55e466b8b_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\portrait\cb77d946-3590-4c66-900b-50d8c0d2c818_Nha tro test.png'))">
       <SourceType>Package</SourceType>
@@ -720,6 +828,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\74dcef81-af49-4b29-8cae-0c477541bcc9_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/representative/89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\89125d75-bad9-493d-b0f6-234628c2745d_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\89cad4d5-06bf-4cfb-9ffd-102ae8f268a7_Nha tro test.png'))">
       <SourceType>Package</SourceType>
       <SourceId>QLNT</SourceId>
@@ -791,6 +917,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\bcb69e2a-89ee-4f01-94d8-5545d226ac0d_Nha tro test.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QLNT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QLNT</BasePath>
+      <RelativePath>Images/customers/representative/d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dyo7c2q2jc</Fingerprint>
+      <Integrity>65FqdLBMQNLPzA+44Y+n9vcx70uTSb5/1ol5NHG0Cy4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\d15f41e9-899d-49d3-ad30-cd877275fea8_Nha tro test.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\customers\representative\e0d6c23b-d6ee-4680-94e4-f77239db2f3a_Nha tro test.png'))">
       <SourceType>Package</SourceType>

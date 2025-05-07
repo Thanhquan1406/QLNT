@@ -1,14 +1,26 @@
 using Microsoft.EntityFrameworkCore;
 using QLNT.Models;
 using QLNT.Models.ViewModels;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using QLNT.Models.Identity;
 
 namespace QLNT.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // Xóa toàn bộ phần log SQL
+            optionsBuilder.LogTo(message => {
+                // Không cần log gì cả
+            }, LogLevel.Information);
         }
 
         public DbSet<Building> Buildings { get; set; }
@@ -26,6 +38,14 @@ namespace QLNT.Data
         {
             base.OnModelCreating(modelBuilder);
             
+            // Cấu hình Identity
+            modelBuilder.Entity<ApplicationUser>(entity =>
+            {
+                entity.Property(e => e.FullName).HasMaxLength(100);
+                entity.Property(e => e.Address).HasMaxLength(500);
+                entity.Property(e => e.PhoneNumber).HasMaxLength(20);
+            });
+
             // Cấu hình Service
             modelBuilder.Entity<Service>(entity =>
             {
@@ -195,20 +215,28 @@ namespace QLNT.Data
             modelBuilder.Entity<Invoice>(entity =>
             {
                 entity.HasKey(e => e.InvoiceId);
-                entity.Property(e => e.Period).IsRequired().HasMaxLength(20);
-                entity.Property(e => e.IssueDate).IsRequired();
-                entity.Property(e => e.DueDate).IsRequired();
-                entity.Property(e => e.Status).IsRequired();
-                entity.Property(e => e.PaymentMethod).HasMaxLength(50);
-                entity.Property(e => e.ReferenceNumber).HasMaxLength(50);
-                entity.Property(e => e.Notes).HasMaxLength(500);
+                entity.Property(e => e.InvoiceNumber).IsRequired().HasMaxLength(10);
+                entity.Property(e => e.PaymentCycle).HasMaxLength(50);
+                entity.Property(e => e.RentAmount).HasPrecision(18, 2);
+                entity.Property(e => e.ServiceAmount).HasPrecision(18, 2);
+                entity.Property(e => e.Discount).HasPrecision(18, 2);
+                entity.Property(e => e.TotalAmount).HasPrecision(18, 2);
+                entity.Property(e => e.PaidAmount).HasPrecision(18, 2);
+                entity.Property(e => e.TotalDebt).HasPrecision(18, 2);
+                entity.Property(e => e.Notes).HasMaxLength(500).IsRequired(false);
 
                 // Cấu hình quan hệ với Contract
                 entity.HasOne(i => i.Contract)
                     .WithMany(c => c.Invoices)
                     .HasForeignKey(i => i.ContractId)
                     .OnDelete(DeleteBehavior.Restrict)
-                    .IsRequired(true);
+                    .IsRequired();
+
+                // Cấu hình quan hệ với InvoiceDetails
+                entity.HasMany(i => i.InvoiceDetails)
+                    .WithOne(id => id.Invoice)
+                    .HasForeignKey(id => id.InvoiceId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             // Cấu hình InvoiceDetail
@@ -222,11 +250,11 @@ namespace QLNT.Data
                 entity.Property(e => e.DepositType).HasMaxLength(50);
                 entity.Property(e => e.Notes).HasMaxLength(500);
 
-                // Cấu hình quan hệ với Invoice
-                entity.HasOne(id => id.Invoice)
-                    .WithMany(i => i.InvoiceDetails)
-                    .HasForeignKey(id => id.InvoiceId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                // Cấu hình quan hệ với Service
+                entity.HasOne(id => id.Service)
+                    .WithMany()
+                    .HasForeignKey(id => id.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
             // Cấu hình RoomService
