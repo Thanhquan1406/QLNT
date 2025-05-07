@@ -8,7 +8,7 @@ namespace QLNT.Models
     {
         public Customer()
         {
-            Contracts = new HashSet<Contract>();
+            Contracts = new List<Contract>();
         }
 
         [Key]

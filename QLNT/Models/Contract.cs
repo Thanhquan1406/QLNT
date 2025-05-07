@@ -1,11 +1,18 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace QLNT.Models
 {
     public class Contract
     {
+        public Contract()
+        {
+            RoomServices = new List<RoomService>();
+            Invoices = new List<Invoice>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -74,10 +81,15 @@ namespace QLNT.Models
 
         // Foreign keys
         public int RoomId { get; set; }
+        [ForeignKey("RoomId")]
         public virtual Room Room { get; set; }
 
         public int CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
+
+        public virtual ICollection<RoomService> RoomServices { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 
     public enum ContractStatus

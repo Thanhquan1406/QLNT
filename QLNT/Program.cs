@@ -5,80 +5,89 @@ using QLNT.Repository;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http.Features;
 using QLNT.Models;
+using QLNT.Models.ViewModels;
+using Microsoft.AspNetCore.Identity;
+using QLNT.Models.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Cấu hình logging
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
-builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
 // Thêm dịch vụ vào container.
 builder.Services.AddControllersWithViews();
 
-// Cấu hình cho phép upload file lớn hơn
-builder.Services.Configure<IISServerOptions>(options =>
+// Thêm DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.MaxRequestBodySize = int.MaxValue;
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.Configure<FormOptions>(options =>
+// Thêm Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
-    options.MultipartBodyLengthLimit = int.MaxValue;
+    // Cấu hình password
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 8;
+    options.Password.RequiredUniqueChars = 1;
+
+    // Cấu hình Lockout
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.AllowedForNewUsers = true;
+
+    // Cấu hình User
+    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = true;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders();
+
+// Cấu hình Cookie
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+    options.SlidingExpiration = true;
 });
 
-try
+// Thêm dịch vụ tùy chỉnh
+builder.Services.AddScoped<ICodeGeneratorService, CodeGeneratorService>();
+builder.Services.AddScoped<IBuildingRepository, BuildingRepository>();
+builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IContractRepository, ContractRepository>();
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
+builder.Services.AddScoped<IMeterLogRepository, MeterLogRepository>();
+builder.Services.AddScoped<IInvoiceRepository, InvoiceRepository>();
+builder.Services.AddScoped<IInvoiceDetailRepository, InvoiceDetailRepository>();
+
+var app = builder.Build();
+
+// Cấu hình pipeline xử lý HTTP request.
+if (!app.Environment.IsDevelopment())
 {
-    // Thêm DbContext
-    builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-        
-        // Tắt sensitive data logging trong môi trường production
-        if (!builder.Environment.IsDevelopment())
-        {
-            options.EnableSensitiveDataLogging(false);
-        }
-    });
-
-    // Thêm dịch vụ tùy chỉnh
-    builder.Services.AddScoped<ICodeGeneratorService, CodeGeneratorService>();
-    builder.Services.AddScoped<IBuildingRepository, BuildingRepository>();
-    builder.Services.AddScoped<IRoomRepository, RoomRepository>();
-    builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
-    builder.Services.AddScoped<IContractRepository, ContractRepository>();
-
-    var app = builder.Build();
-
-    // Cấu hình pipeline xử lý HTTP request.
-    if (!app.Environment.IsDevelopment())
-    {
-        app.UseExceptionHandler("/Home/Error");
-        app.UseHsts();
-    }
-    else
-    {
-        // Tắt HTTPS redirection trong môi trường development
-        app.UseDeveloperExceptionPage();
-    }
-
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
-
-    app.UseRouting();
-
-    app.UseAuthorization();
-
-    app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
-
-    app.Run();
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
 }
-catch (Exception ex)
+else
 {
-    Console.WriteLine($"Lỗi khởi tạo ứng dụng: {ex.Message}");
-    Console.WriteLine($"Stack trace: {ex.StackTrace}");
-    throw;
+    app.UseDeveloperExceptionPage();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+// Thêm Authentication và Authorization
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

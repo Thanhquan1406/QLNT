@@ -1,0 +1,123 @@
+@model IEnumerable<QLNT.Models.MeterLog>
+
+@{
+    ViewData["Title"] = "Danh sách ghi chỉ số đồng hồ";
+}
+
+<!-- Thêm các thư viện cần thiết -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a asp-action="Create" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Thêm mới
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="meterLogsTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th width="30px">
+                                <input type="checkbox" class="form-check-input" id="selectAll">
+                            </th>
+                            <th>Mã</th>
+                            <th>Công tơ</th>
+                            <th>Số cũ</th>
+                            <th>Số mới</th>
+                            <th>Tiêu thụ</th>
+                            <th>Ngày chốt</th>
+                            <th>Đã duyệt</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input meterlog-select">
+                                    </td>
+                                    <td>@item.Id</td>
+                                    <td>@(item.MeterType == "Electric" ? "CTĐ-" : "CTN-")@item.Room?.Name</td>
+                                    <td>@item.OldReading.ToString("N2")</td>
+                                    <td>@item.NewReading.ToString("N2")</td>
+                                    <td>@item.Consumption.ToString("N2")</td>
+                                    <td>@item.ReadingDate.ToString("dd-MM-yyyy")</td>
+                                    <td>
+                                        @if (item.IsCurrentMeter)
+                                        {
+                                            <span class="badge bg-success">Đã duyệt</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">Chưa duyệt</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                                <i class="fas fa-edit"></i> Sửa
+                                            </a>
+                                            <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display: inline;">
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này?');">
+                                                    <i class="fas fa-trash"></i> Xóa
+                                                </button>
+                                            </form>
+                                            @if (item.IsCurrentMeter)
+                                            {
+                                                <a asp-action="ToggleApproval" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">
+                                                    <i class="fas fa-times"></i> Hủy duyệt
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a asp-action="ToggleApproval" asp-route-id="@item.Id" class="btn btn-sm btn-success">
+                                                    <i class="fas fa-check"></i> Duyệt
+                                                </a>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="9" class="text-center text-muted">Không có bản ghi nào!</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#meterLogsTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/vi.json'
+                },
+                order: [[1, 'asc']],
+                columnDefs: [
+                    { orderable: false, targets: [0, 8] }
+                ]
+            });
+
+            // Xử lý chọn tất cả
+            $('#selectAll').change(function() {
+                $('.meterlog-select').prop('checked', $(this).prop('checked'));
+            });
+        });
+    </script>
+}

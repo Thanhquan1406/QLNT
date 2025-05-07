@@ -37,5 +37,7 @@ namespace QLNT.Repository
         Task<int> GetTotalActiveContractsAsync();
         Task<decimal> GetTotalMonthlyRevenueAsync();
         Task<decimal> GetTotalDepositAsync();
+
+        Task<IEnumerable<Contract>> GetContractsByRoomIdAsync(int roomId);
     }
 } 

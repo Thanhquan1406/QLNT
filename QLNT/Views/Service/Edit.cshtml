@@ -1,0 +1,91 @@
+@model QLNT.Models.ServiceViewModel
+@using QLNT.Helpers
+@using QLNT.Models
+
+@{
+    ViewData["Title"] = "Chỉnh sửa dịch vụ";
+}
+
+<div class="container">
+    <h1>Chỉnh sửa dịch vụ</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="ServiceCode" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="ServiceName" class="control-label"></label>
+                    <input asp-for="ServiceName" class="form-control" />
+                    <span asp-validation-for="ServiceName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ServiceType" class="control-label"></label>
+                    <select asp-for="ServiceType" class="form-control" asp-items="@EnumHelper.GetSelectList<ServiceTypes>()">
+                    </select>
+                    <span asp-validation-for="ServiceType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PriceType" class="control-label"></label>
+                    <select asp-for="PriceType" class="form-control" asp-items="@EnumHelper.GetSelectList<PriceTypes>()">
+                    </select>
+                    <span asp-validation-for="PriceType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label"></label> <span class="text-muted">(tùy chọn)</span>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" type="number" step="0.01" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Unit" class="control-label"></label>
+                    <select asp-for="Unit" class="form-control" asp-items="@EnumHelper.GetSelectList<UnitTypes>()">
+                    </select>
+                    <span asp-validation-for="Unit" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="control-label">Tòa nhà sử dụng</label> <span class="text-muted">(có thể chọn nhiều)</span>
+                    <div class="border p-2" style="max-height: 200px; overflow-y: auto;">
+                        @if (Model.Buildings != null)
+                        {
+                            foreach (var building in Model.Buildings)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" 
+                                           name="SelectedBuildingIds" 
+                                           value="@building.Id" 
+                                           id="building_@building.Id"
+                                           @(Model.SelectedBuildingIds.Contains(building.Id) ? "checked" : "") />
+                                    <label class="form-check-label" for="building_@building.Id">
+                                        @building.Name
+                                    </label>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Lưu" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

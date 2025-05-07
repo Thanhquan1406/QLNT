@@ -1,0 +1,7 @@
+@model IEnumerable<QLNT.Models.Room>
+
+<option value="">-- Chọn phòng --</option>
+@foreach (var room in Model)
+{
+    <option value="@room.Id">@room.Name</option>
+} 

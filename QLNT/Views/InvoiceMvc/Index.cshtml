@@ -1,0 +1,194 @@
+@model IEnumerable<QLNT.Models.Invoice>
+
+@{
+    ViewData["Title"] = "Danh sách hóa đơn";
+}
+
+<!-- Thêm các thư viện cần thiết -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a asp-action="Create" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Tạo hóa đơn mới
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="invoicesTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th width="30px">
+                                <input type="checkbox" class="form-check-input" id="selectAll">
+                            </th>
+                            <th>Mã</th>
+                            <th>Thao tác</th>
+                            <th>Tên</th>
+                            <th>Khách hàng</th>
+                            <th>Tiền thuê</th>
+                            <th>Tiền dịch vụ</th>
+                            <th>Tổng tiền</th>
+                            <th>Đã trả</th>
+                            <th>Nợ</th>
+                            <th>Nợ cộng dồn</th>
+                            <th>Hạn TT</th>
+                            <th>Duyệt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input invoice-select">
+                                </td>
+                                <td>@item.InvoiceNumber</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-success approve-btn" data-id="@item.InvoiceId" @(item.IsApproved == true ? "disabled" : "") data-bs-toggle="modal" data-bs-target="#approveModal" data-invoice-number="@item.InvoiceNumber">
+                                            <i class="fas fa-check-circle"></i> Duyệt
+                                        </button>
+                                        <button class="btn btn-sm btn-info">
+                                            <i class="fas fa-file-invoice"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-secondary" onclick="location.href='@Url.Action("Edit", "InvoiceMvc", new { id = item.InvoiceId })'">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <form asp-action="Delete" asp-route-id="@item.InvoiceId" method="post" style="display: inline;">
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa hóa đơn này?');">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td>Hóa đơn hàng tháng tháng @item.IssueDate.ToString("MM-yyyy")</td>
+                                <td>
+                                    <div>@item.Contract?.Customer?.FullName</div>
+                                    <div class="text-muted small">Tòa nhà: @item.Contract?.Room?.Building?.Name</div>
+                                    <div class="text-muted small">Phòng: @item.Contract?.Room?.Code</div>
+                                </td>
+                                <td class="text-end">@item.RentAmount?.ToString("N0")</td>
+                                <td class="text-end">@item.ServiceAmount?.ToString("N0")</td>
+                                <td class="text-end">@item.TotalAmount.ToString("N0")</td>
+                                <td class="text-end">@item.PaidAmount?.ToString("N0")</td>
+                                <td class="text-end">@((item.TotalAmount - (item.PaidAmount ?? 0)).ToString("N0"))</td>
+                                <td class="text-end">@item.TotalDebt?.ToString("N0")</td>
+                                <td>@item.DueDate.ToString("dd-MM-yyyy")</td>
+                                <td>
+                                    @if (item.IsApproved == true)
+                                    {
+                                        <span class="badge bg-success">Đã duyệt</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Chưa duyệt</span>
+                                        <div class="small text-muted">còn @((item.DueDate - DateTime.Now).Days) ngày</div>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal xác nhận duyệt -->
+<div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="approveModalLabel">Xác nhận duyệt hóa đơn</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bạn có chắc chắn muốn duyệt hóa đơn <span id="invoiceNumberText"></span>?</p>
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Sau khi duyệt, hóa đơn sẽ không thể chỉnh sửa.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-success" id="confirmApprove">Xác nhận duyệt</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            let currentInvoiceId = null;
+
+            // Xử lý khi mở modal
+            $('#approveModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                currentInvoiceId = button.data('id');
+                var invoiceNumber = button.data('invoice-number');
+                $('#invoiceNumberText').text(invoiceNumber);
+            });
+
+            // Xử lý nút xác nhận duyệt
+            $('#confirmApprove').click(function() {
+                if (currentInvoiceId) {
+                    $.ajax({
+                        url: '/InvoiceMvc/Approve/' + currentInvoiceId,
+                        type: 'POST',
+                        success: function(response) {
+                            if (response.success) {
+                                var button = $('.approve-btn[data-id="' + currentInvoiceId + '"]');
+                                button.prop('disabled', true);
+                                var statusCell = button.closest('tr').find('td:last');
+                                statusCell.html('<span class="badge bg-success">Đã duyệt</span>');
+                                
+                                toastr.success('Duyệt hóa đơn thành công!', 'Thành công', {
+                                    closeButton: true,
+                                    progressBar: true,
+                                    positionClass: "toast-top-right",
+                                    timeOut: 3000
+                                });
+                                
+                                $('#approveModal').modal('hide');
+                                
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1500);
+                            } else {
+                                toastr.error(response.message || 'Duyệt hóa đơn thất bại', 'Lỗi', {
+                                    closeButton: true,
+                                    progressBar: true,
+                                    positionClass: "toast-top-right",
+                                    timeOut: 3000
+                                });
+                            }
+                        },
+                        error: function() {
+                            toastr.error('Có lỗi xảy ra khi duyệt hóa đơn', 'Lỗi', {
+                                closeButton: true,
+                                progressBar: true,
+                                positionClass: "toast-top-right",
+                                timeOut: 3000
+                            });
+                        }
+                    });
+                }
+            });
+
+            $('#invoicesTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/vi.json'
+                },
+                order: [[1, 'desc']],
+                columnDefs: [
+                    { orderable: false, targets: [0, 2] }
+                ]
+            });
+        });
+    </script>
+} 

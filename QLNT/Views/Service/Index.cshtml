@@ -1,0 +1,104 @@
+@model IEnumerable<QLNT.Models.Service>
+
+@{
+    ViewData["Title"] = "Danh sách dịch vụ";
+}
+
+<!-- Thêm các thư viện cần thiết -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a asp-action="Create" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Thêm mới
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="servicesTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th width="30px">
+                                <input type="checkbox" class="form-check-input" id="selectAll">
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.ServiceCode)</th>
+                            <th>@Html.DisplayNameFor(model => model.ServiceName)</th>
+                            <th>@Html.DisplayNameFor(model => model.ServiceType)</th>
+                            <th>Giá tiền</th>
+                            <th>Mặc định</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input service-select">
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.ServiceCode)</td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ServiceName)
+                                    @if (!string.IsNullOrEmpty(item.Description))
+                                    {
+                                        <div class="text-muted small">@item.Description</div>
+                                    }
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.ServiceType)</td>
+                                <td>@item.Price.ToString("N0") đ/@item.Unit</td>
+                                <td>
+                                    @if (item.BuildingServices.Any(bs => bs.IsActive))
+                                    {
+                                        <span class="badge bg-success">Có</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Không</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i> Sửa
+                                        </a>
+                                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display: inline;">
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa dịch vụ này?');">
+                                                <i class="fas fa-trash"></i> Xóa
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#servicesTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/vi.json'
+                },
+                order: [[1, 'asc']],
+                columnDefs: [
+                    { orderable: false, targets: [0, 6] }
+                ]
+            });
+
+            // Xử lý chọn tất cả
+            $('#selectAll').change(function() {
+                $('.service-select').prop('checked', $(this).prop('checked'));
+            });
+        });
+    </script>
+} 

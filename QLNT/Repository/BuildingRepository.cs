@@ -15,7 +15,7 @@ namespace QLNT.Repository
             _context = context;
         }
 
-        public async Task<IEnumerable<Building>> GetAllAsync()
+        public async Task<IEnumerable<Building>> GetAllBuildingsAsync()
         {
             return await _context.Buildings.ToListAsync();
         }
@@ -25,7 +25,7 @@ namespace QLNT.Repository
             return await _context.Buildings.FindAsync(id);
         }
 
-        public async Task<Building> AddBuildingAsync(Building building)
+        public async Task<Building> CreateBuildingAsync(Building building)
         {
             _context.Buildings.Add(building);
             await _context.SaveChangesAsync();
@@ -39,14 +39,15 @@ namespace QLNT.Repository
             return building;
         }
 
-        public async Task DeleteBuildingAsync(int id)
+        public async Task<bool> DeleteBuildingAsync(int id)
         {
             var building = await _context.Buildings.FindAsync(id);
-            if (building != null)
-            {
-                _context.Buildings.Remove(building);
-                await _context.SaveChangesAsync();
-            }
+            if (building == null)
+                return false;
+
+            _context.Buildings.Remove(building);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<bool> BuildingExistsAsync(int id)

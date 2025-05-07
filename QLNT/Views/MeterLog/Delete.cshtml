@@ -1,0 +1,60 @@
+@model QLNT.Models.MeterLog
+
+@{
+    ViewData["Title"] = "Xóa ghi chỉ số đồng hồ";
+}
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-danger">Bạn có chắc chắn muốn xóa bản ghi này?</h3>
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i> Hành động này không thể hoàn tác!
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Phòng</dt>
+                <dd class="col-sm-9">@Model.Room?.Name</dd>
+
+                <dt class="col-sm-3">Tòa nhà</dt>
+                <dd class="col-sm-9">@Model.Room?.Building?.Name</dd>
+
+                <dt class="col-sm-3">Loại đồng hồ</dt>
+                <dd class="col-sm-9">@Model.MeterType</dd>
+
+                <dt class="col-sm-3">Chỉ số cũ</dt>
+                <dd class="col-sm-9">@Model.OldReading.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Chỉ số mới</dt>
+                <dd class="col-sm-9">@Model.NewReading.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Tiêu thụ</dt>
+                <dd class="col-sm-9">@Model.Consumption.ToString("N2")</dd>
+
+                <dt class="col-sm-3">Tháng</dt>
+                <dd class="col-sm-9">@Model.Month</dd>
+
+                <dt class="col-sm-3">Ngày ghi</dt>
+                <dd class="col-sm-9">@Model.ReadingDate.ToString("dd/MM/yyyy")</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group text-end">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Xóa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,42 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/QLNT.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #content {
+            width: 100%;
+            min-height: 100vh;
+            transition: all 0.3s;
+            padding: 20px;
+        }
+
+        @@media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+            #sidebar.active {
+                margin-left: 0;
+            }
+        }
+    </style>
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <div class="wrapper">
@@ -32,6 +67,25 @@
                 </li>
                 <li>
                     <a href="/Contract/Index"><i class="fas fa-file-contract"></i> Quản lý hợp đồng</a>
+                </li>
+                <li>
+                    <a href="#invoiceSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-file-invoice-dollar"></i> Quản lý hóa đơn
+                    </a>
+                    <ul class="collapse list-unstyled" id="invoiceSubmenu">
+                        <li>
+                            <a href="/InvoiceMvc/Index"><i class="fas fa-list"></i> Danh sách hóa đơn</a>
+                        </li>
+                        <li>
+                            <a href="/InvoiceDetailMvc/Index"><i class="fas fa-list-alt"></i> Chi tiết hóa đơn</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Service/Index"><i class="fas fa-concierge-bell"></i> Quản lý dịch vụ</a>
+                </li>
+                <li>
+                    <a href="/MeterLog/Index"><i class="fas fa-tachometer-alt"></i> Quản lý công tơ</a>
                 </li>
             </ul>
         </nav>
@@ -79,6 +133,7 @@
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('active');
             });
         });
     </script>

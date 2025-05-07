@@ -1,28 +1,85 @@
 using Microsoft.EntityFrameworkCore;
 using QLNT.Models;
+using QLNT.Models.ViewModels;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using QLNT.Models.Identity;
 
 namespace QLNT.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // Xóa toàn bộ phần log SQL
+            optionsBuilder.LogTo(message => {
+                // Không cần log gì cả
+            }, LogLevel.Information);
+        }
+
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Contract> Contracts { get; set; }
-
-        // Thêm các DbSet cho các model của bạn ở đây
-        // Ví dụ:
-        // public DbSet<YourModel> YourModels { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<BuildingService> BuildingServices { get; set; }
+        public DbSet<MeterLog> MeterLogs { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
+        public DbSet<RoomService> RoomServices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             
+            // Cấu hình Identity
+            modelBuilder.Entity<ApplicationUser>(entity =>
+            {
+                entity.Property(e => e.FullName).HasMaxLength(100);
+                entity.Property(e => e.Address).HasMaxLength(500);
+                entity.Property(e => e.PhoneNumber).HasMaxLength(20);
+            });
+
+            // Cấu hình Service
+            modelBuilder.Entity<Service>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.ServiceName).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.ServiceType).IsRequired();
+                entity.Property(e => e.PriceType).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Description).HasMaxLength(1000);
+                entity.Property(e => e.Price).HasPrecision(18, 2);
+                entity.Property(e => e.Unit).IsRequired().HasMaxLength(50);
+            });
+
+            // Cấu hình BuildingService (bảng trung gian)
+            modelBuilder.Entity<BuildingService>(entity =>
+            {
+                entity.HasKey(bs => new { bs.BuildingId, bs.ServiceId });
+
+                entity.HasOne(bs => bs.Building)
+                    .WithMany(b => b.BuildingServices)
+                    .HasForeignKey(bs => bs.BuildingId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(bs => bs.Service)
+                    .WithMany(s => s.BuildingServices)
+                    .HasForeignKey(bs => bs.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+                
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(true);
+            });
+
             // Cấu hình Building
             modelBuilder.Entity<Building>(entity =>
             {
@@ -132,6 +189,96 @@ namespace QLNT.Data
                 .WithMany(b => b.Rooms)
                 .HasForeignKey(r => r.BuildingId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Cấu hình MeterLog
+            modelBuilder.Entity<MeterLog>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.MeterType).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.MeterName).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Month).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.OldReading).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.NewReading).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.ReadingDate).IsRequired();
+                entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.IsCurrentMeter).HasDefaultValue(false);
+
+                // Cấu hình quan hệ với Room
+                entity.HasOne(ml => ml.Room)
+                    .WithMany(r => r.MeterLogs)
+                    .HasForeignKey(ml => ml.RoomId)
+                    .IsRequired()
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Cấu hình Invoice
+            modelBuilder.Entity<Invoice>(entity =>
+            {
+                entity.HasKey(e => e.InvoiceId);
+                entity.Property(e => e.InvoiceNumber).IsRequired().HasMaxLength(10);
+                entity.Property(e => e.PaymentCycle).HasMaxLength(50);
+                entity.Property(e => e.RentAmount).HasPrecision(18, 2);
+                entity.Property(e => e.ServiceAmount).HasPrecision(18, 2);
+                entity.Property(e => e.Discount).HasPrecision(18, 2);
+                entity.Property(e => e.TotalAmount).HasPrecision(18, 2);
+                entity.Property(e => e.PaidAmount).HasPrecision(18, 2);
+                entity.Property(e => e.TotalDebt).HasPrecision(18, 2);
+                entity.Property(e => e.Notes).HasMaxLength(500).IsRequired(false);
+
+                // Cấu hình quan hệ với Contract
+                entity.HasOne(i => i.Contract)
+                    .WithMany(c => c.Invoices)
+                    .HasForeignKey(i => i.ContractId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
+
+                // Cấu hình quan hệ với InvoiceDetails
+                entity.HasMany(i => i.InvoiceDetails)
+                    .WithOne(id => id.Invoice)
+                    .HasForeignKey(id => id.InvoiceId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Cấu hình InvoiceDetail
+            modelBuilder.Entity<InvoiceDetail>(entity =>
+            {
+                entity.HasKey(e => e.InvoiceDetailId);
+                entity.Property(e => e.ItemName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.UnitPrice).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.Quantity).HasPrecision(18, 2);
+                entity.Property(e => e.Unit).HasMaxLength(50);
+                entity.Property(e => e.DepositType).HasMaxLength(50);
+                entity.Property(e => e.Notes).HasMaxLength(500);
+
+                // Cấu hình quan hệ với Service
+                entity.HasOne(id => id.Service)
+                    .WithMany()
+                    .HasForeignKey(id => id.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // Cấu hình RoomService
+            modelBuilder.Entity<RoomService>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Price).IsRequired().HasPrecision(18, 2);
+                entity.Property(e => e.Unit).IsRequired().HasMaxLength(50);
+                entity.Property(e => e.Description).HasMaxLength(500);
+                entity.Property(e => e.IsActive).HasDefaultValue(true);
+                entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+
+                // Cấu hình quan hệ với Room
+                entity.HasOne(rs => rs.Room)
+                    .WithMany(r => r.RoomServices)
+                    .HasForeignKey(rs => rs.RoomId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                // Cấu hình quan hệ với Service
+                entity.HasOne(rs => rs.Service)
+                    .WithMany(s => s.RoomServices)
+                    .HasForeignKey(rs => rs.ServiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
         }
     }
 } 
